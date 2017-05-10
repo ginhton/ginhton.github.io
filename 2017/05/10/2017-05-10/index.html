@@ -87,17 +87,17 @@
 
 
 
-<meta name="description" content="2 Think Reaction is the world I live. Be happy and stupid!  2 Do read five pages paper learn to use org mode outline my graduation design paper write today’s blog browse some intesting websites  2 Not">
+<meta name="description" content="2 Note slice: return specific items from current array. [start, end) 1arr.slice(start, end);  splice: remove specific items by giving {start, howmany} 1arr.splice(start, howmany);  slice has no effect">
 <meta name="keywords">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2017-05-02">
-<meta property="og:url" content="http://yoursite.com/2017/05/02/2017-05-02/index.html">
+<meta property="og:title" content="2017-05-10">
+<meta property="og:url" content="http://yoursite.com/2017/05/10/2017-05-10/index.html">
 <meta property="og:site_name" content="悟">
-<meta property="og:description" content="2 Think Reaction is the world I live. Be happy and stupid!  2 Do read five pages paper learn to use org mode outline my graduation design paper write today’s blog browse some intesting websites  2 Not">
-<meta property="og:updated_time" content="2017-05-02T13:09:47.009Z">
+<meta property="og:description" content="2 Note slice: return specific items from current array. [start, end) 1arr.slice(start, end);  splice: remove specific items by giving {start, howmany} 1arr.splice(start, howmany);  slice has no effect">
+<meta property="og:updated_time" content="2017-05-10T15:12:57.218Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="2017-05-02">
-<meta name="twitter:description" content="2 Think Reaction is the world I live. Be happy and stupid!  2 Do read five pages paper learn to use org mode outline my graduation design paper write today’s blog browse some intesting websites  2 Not">
+<meta name="twitter:title" content="2017-05-10">
+<meta name="twitter:description" content="2 Note slice: return specific items from current array. [start, end) 1arr.slice(start, end);  splice: remove specific items by giving {start, howmany} 1arr.splice(start, howmany);  slice has no effect">
 
 
 
@@ -125,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/05/02/2017-05-02/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/05/10/2017-05-10/"/>
 
 
 
 
 
-  <title> 2017-05-02 | 悟 </title>
+  <title> 2017-05-10 | 悟 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -250,7 +250,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/02/2017-05-02/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/10/2017-05-10/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ginhton">
@@ -271,7 +271,7 @@
             
             
               
-                2017-05-02
+                2017-05-10
               
             
           </h1>
@@ -286,8 +286,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-02T16:31:19+08:00">
-                2017-05-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-10T22:53:47+08:00">
+                2017-05-10
               </time>
             
 
@@ -322,26 +322,42 @@
       
 
       
-        <h1 id="2-Think"><a href="#2-Think" class="headerlink" title="2 Think"></a>2 Think</h1><blockquote>
-<p>Reaction is the world I live. Be happy and stupid!</p>
-</blockquote>
-<h1 id="2-Do"><a href="#2-Do" class="headerlink" title="2 Do"></a>2 Do</h1><ul>
-<li>read five pages paper</li>
-<li>learn to use org mode</li>
-<li>outline my graduation design paper</li>
-<li>write today’s blog</li>
-<li>browse some intesting websites</li>
+        <h1 id="2-Note"><a href="#2-Note" class="headerlink" title="2 Note"></a>2 Note</h1><ul>
+<li><p><code>slice</code>: return specific items from current array. [start, end)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">arr.slice(start, end);</div></pre></td></tr></table></figure>
+</li>
+<li><p><code>splice</code>: remove specific items by giving {start, howmany}</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">arr.splice(start, howmany);</div></pre></td></tr></table></figure>
+</li>
+<li><p><code>slice</code> has no effect on the original array, but the <code>splice</code> will alter the array.</p>
+</li>
+<li>check if vim support clipboard<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim --version | clipboard</div></pre></td></tr></table></figure>
+</li>
 </ul>
-<h1 id="2-Note"><a href="#2-Note" class="headerlink" title="2 Note"></a>2 Note</h1><ul>
-<li><code>M-/</code> auto-complete in emacs edit</li>
-<li><code>C-x b</code> will search a buffer to open</li>
+<p>the output maybe:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">-clipboard       +job             +path_extra      +user_commands</div><div class="line">+eval            +mouse_dec       +statusline      -xterm_clipboard</div></pre></td></tr></table></figure></p>
+<p>this means that my vim doesn’t support clipboard.<br>after search in web, I find the solution:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">apt-get install vim-gtk</div></pre></td></tr></table></figure></p>
+<p>after install, input the first command to check, the output will be like:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">+clipboard       +job             +path_extra      +user_commands</div><div class="line">+eval            +mouse_dec       +statusline      +xterm_clipboard</div></pre></td></tr></table></figure></p>
+<ul>
+<li><p>js: find an array’s max number</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [ <span class="number">1</span>, <span class="number">20</span>, <span class="number">2</span> ];</div><div class="line"><span class="built_in">Math</span>.max.apply(<span class="literal">null</span>, arr);</div><div class="line"></div><div class="line"><span class="comment">// another method</span></div><div class="line"><span class="comment">// bind this function to Array prototype</span></div><div class="line"><span class="built_in">Array</span>.prototype.max = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="built_in">Math</span>.max.apply(<span class="literal">null</span>, <span class="keyword">this</span>);</div><div class="line">&#125;;</div><div class="line">arr.max();</div></pre></td></tr></table></figure>
+</li>
+<li><p>js sort function need a function to sort, and the function needed should return 1 and -1 accordingly.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// may have error</span></div><div class="line">arr.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a,b</span>) </span>&#123;<span class="keyword">return</span> a &lt; b;&#125;);</div><div class="line"><span class="comment">// right</span></div><div class="line">arr.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a,b</span>) </span>&#123;<span class="keyword">if</span> (a&lt;b) &#123;<span class="keyword">return</span> <span class="number">1</span>;&#125; <span class="keyword">else</span> <span class="keyword">return</span> <span class="number">-1</span>;&#125;);</div></pre></td></tr></table></figure>
+</li>
+<li><p><code>C-c ]</code>: remove current file from the list of agenda files </p>
+</li>
+<li><code>C-c [</code>: add current file to the list of agenda files. </li>
+</ul>
+<h1 id="2-Do"><a href="#2-Do" class="headerlink" title="2 Do"></a>2 Do</h1><ul>
+<li>freecodecamp. use a lot of time to find the math solution of the exercise.</li>
+<li><p>Mid-term check.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">论文要求必须是外国人写的</div><div class="line">封面不要有页眉和页脚</div><div class="line">论文中避免使用“我们”、“本文”等字眼，写得应该专业一些</div></pre></td></tr></table></figure>
+</li>
+<li><p>nap</p>
+</li>
 </ul>
 <h1 id="2-Say"><a href="#2-Say" class="headerlink" title="2 Say"></a>2 Say</h1><ul>
-<li>I have a long rest this afternoon. I felt a little nervous with a lot of things undone. Well, I should focus and do the rest thing. </li>
-<li>Yesterday, I have a thought of becoming a writer. a little strange, aha.</li>
-<li>Try to find more intresting things and do a little more.</li>
-<li><strong>Problem is that, though I am doing, learning and thinking, I have no idea how or if I make progress.</strong> The path to the end is still unclear, but the good thing may happen. I need to feel them and celebrate them. What is good? Maybe just a kind of spirit. So, can I accept that the world is make up of mind? The reaction towards the thing is the world, and it verys from people to people.</li>
-<li>I just need to learn to accept current state and appreciate that. Learn to feel happy no matter what happend.</li>
+<li>The morning is beautiful!</li>
 </ul>
 
       
@@ -379,18 +395,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/05/03/2017-05-03/" rel="next" title="2017-05-03">
-                <i class="fa fa-chevron-left"></i> 2017-05-03
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/05/01/2017-05-01/" rel="prev" title="2017-05-01">
-                2017-05-01 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/05/09/2017-05-09/" rel="prev" title="2017-05-09">
+                2017-05-09 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -502,7 +514,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Think"><span class="nav-number">1.</span> <span class="nav-text">2 Think</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Do"><span class="nav-number">2.</span> <span class="nav-text">2 Do</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Note"><span class="nav-number">3.</span> <span class="nav-text">2 Note</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Say"><span class="nav-number">4.</span> <span class="nav-text">2 Say</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Note"><span class="nav-number">1.</span> <span class="nav-text">2 Note</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Do"><span class="nav-number">2.</span> <span class="nav-text">2 Do</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Say"><span class="nav-number">3.</span> <span class="nav-text">2 Say</span></a></li></ol></div>
             
 
           </div>
