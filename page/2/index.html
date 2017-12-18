@@ -247,6 +247,153 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/02/2017-12-02/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ginhton">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="悟">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/12/02/2017-12-02/" itemprop="url">
+                  2017-12-02
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-02T18:57:08+08:00">
+                2017-12-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="2-THANK"><a href="#2-THANK" class="headerlink" title="2 THANK"></a>2 THANK</h1><ul>
+<li>Thank Habitica for make such a beautiful application to manage daily work. I hope it can help me to live better.</li>
+</ul>
+<h1 id="2-NOTE"><a href="#2-NOTE" class="headerlink" title="2 NOTE"></a>2 NOTE</h1><ul>
+<li><p>Browserify: it looks for calls to require, resolve all dependencis, and gather the needed code into a single big file. The website itself can simply load this file to get all the modules it needs.</p>
+</li>
+<li><p>AMD: Asynchronous Module Definition</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">define([<span class="string">"weekDay"</span>, <span class="string">"today"</span>], <span class="function"><span class="keyword">function</span>(<span class="params">weekDay, today</span>) </span>&#123;</div><div class="line">  <span class="built_in">console</span>.log(weekDay.name(today.dayNumber()));</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+</li>
+<li><p>js re: loop through every match and deal with them.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">while</span> (match = <span class="regexp">/\b(\d+)\b/g</span>.exec(input)) &#123;</div><div class="line">  <span class="built_in">console</span>.log(match[<span class="number">1</span>], match.index);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>a new method: push a empty object into list, and then update that object. Instead of prepare a full object and then insert it into list.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">list = []</div><div class="line"><span class="keyword">for</span>(;;) &#123;</div><div class="line">obj = &#123;&#125;</div><div class="line">list.push(obj);</div><div class="line">obj.data = <span class="string">'something'</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>javascript object can not have same property name, the latter will overwritten the formar.</p>
+</li>
+<li><p>hexo tags format:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">tags: </div><div class="line">  - tag1</div><div class="line">  - tag2</div></pre></td></tr></table></figure>
+</li>
+<li><p>hexo add tag support:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">hexo new page tags</div><div class="line">edit _config.yml, ensure that &quot;tag_dir: tags&quot;</div><div class="line">edit source/tags/index.md, add following:</div><div class="line">--</div><div class="line">title: tags</div><div class="line">date: some date</div><div class="line">type: &quot;tags&quot;</div><div class="line">comments: false</div><div class="line">--</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<h1 id="2-RECORD"><a href="#2-RECORD" class="headerlink" title="2 RECORD"></a>2 RECORD</h1><ul>
+<li>today nothing special happen.</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/01/2017-12-01/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1454,138 +1601,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/19/2017-11-19/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ginhton">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="悟">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/11/19/2017-11-19/" itemprop="url">
-                  2017-11-19
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-19T21:41:35+08:00">
-                2017-11-19
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="2-Say"><a href="#2-Say" class="headerlink" title="2 Say"></a>2 Say</h1><ul>
-<li>Not only food and knowledge, spirit and emotion need time to consume and absorb.</li>
-<li>There are instresting thing and people in near, but maybe need some time or energy to unlock.</li>
-<li>Life is just like a game. But only once. So I refuse some suggestions. LIFE maybe not so good, but SHOULD COME OUT OF MY HAND.</li>
-</ul>
-<h1 id="2-Think"><a href="#2-Think" class="headerlink" title="2 Think"></a>2 Think</h1><ul>
-<li>let heart flow. let spirit flow.</li>
-<li>write down what I am thinking. If I have no mean to record my mind, I give up think or deep think.</li>
-<li>crowd has a magic of cure.</li>
-<li>you can start to do a small thing and have a short rest. Maybe during this short period, instresting ideas will appear.</li>
-<li>everything is natural.</li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1635,7 +1650,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">74</span>
+                <span class="site-state-item-count">75</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
