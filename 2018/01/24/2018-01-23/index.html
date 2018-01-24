@@ -87,17 +87,17 @@
 
 
 
-<meta name="description" content="2 say something to say….">
+<meta name="description" content="2 Note webContents is an EventEmitter. it is responsible for rendering and controlling a web page and is a property of the BrowserWindow object. So there are many events callback can bind on this obje">
 <meta name="keywords">
 <meta property="og:type" content="article">
-<meta property="og:title" content="2017-06-05">
-<meta property="og:url" content="http://yoursite.com/2017/06/05/2017-06-05/index.html">
+<meta property="og:title" content="2018-01-23">
+<meta property="og:url" content="http://yoursite.com/2018/01/24/2018-01-23/index.html">
 <meta property="og:site_name" content="悟">
-<meta property="og:description" content="2 say something to say….">
-<meta property="og:updated_time" content="2017-06-05T10:25:49.536Z">
+<meta property="og:description" content="2 Note webContents is an EventEmitter. it is responsible for rendering and controlling a web page and is a property of the BrowserWindow object. So there are many events callback can bind on this obje">
+<meta property="og:updated_time" content="2018-01-24T00:00:49.699Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="2017-06-05">
-<meta name="twitter:description" content="2 say something to say….">
+<meta name="twitter:title" content="2018-01-23">
+<meta name="twitter:description" content="2 Note webContents is an EventEmitter. it is responsible for rendering and controlling a web page and is a property of the BrowserWindow object. So there are many events callback can bind on this obje">
 
 
 
@@ -125,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/06/05/2017-06-05/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/01/24/2018-01-23/"/>
 
 
 
 
 
-  <title> 2017-06-05 | 悟 </title>
+  <title> 2018-01-23 | 悟 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -250,7 +250,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/05/2017-06-05/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/24/2018-01-23/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="ginhton">
@@ -271,7 +271,7 @@
             
             
               
-                2017-06-05
+                2018-01-23
               
             
           </h1>
@@ -286,8 +286,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-05T18:25:04+08:00">
-                2017-06-05
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-24T08:00:49+08:00">
+                2018-01-24
               </time>
             
 
@@ -322,8 +322,24 @@
       
 
       
-        <h1 id="2-say"><a href="#2-say" class="headerlink" title="2 say"></a>2 say</h1><ul>
-<li>something to say….</li>
+        <h2 id="2-Note"><a href="#2-Note" class="headerlink" title="2 Note"></a>2 Note</h2><ul>
+<li><code>webContents</code> is an <code>EventEmitter</code>. it is responsible for rendering and controlling a web page and is a property of the <code>BrowserWindow</code> object. So there are many events callback can bind on this object.</li>
+<li><code>contents.loadURL(url[, options])</code>: loads the <code>url</code> in the window. The <code>url</code> must contain the protocol prefix, e.g. the <code>http://</code> or <code>file://</code>. </li>
+<li><code>BrowserWindow</code> creates and controls browser windows. It has <code>on(&#39;close&#39;, callback)</code>, <code>show</code>, <code>hide</code>, <code>loadURL(url[,options])</code> and other functions.</li>
+<li><code>Array.shift</code> will pop out the first item in array.</li>
+<li>Template literals are enclosed by the back-tick(` `) character instead of double or single quotes. Template literals can contain placeholders. These are indicated by the dollar sign and curly braces <strong>${expresion}</strong>. </li>
+<li><p>Create a frameless window</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">const &#123;BrowserWindow&#125; = require(&apos;electron&apos;)</div><div class="line">let win = new BrowserWindow(&#123;width: 600, height: 480, frame: false&#125;);</div><div class="line">win.show()</div></pre></td></tr></table></figure>
+</li>
+<li><p>Frameless window is non-draggable. Apps need to specify <code>-webkit-app-region: drag</code> in CSS to tell Electron which regions are draggable, and apps can use <code>-webkit-app-region: no-drag</code> to exclude the non-draggable area from the draggable region. To make the whole window draggable, you can add  <code>-webkit-app-region: drag</code> as <code>body</code>\’s style.</p>
+</li>
+<li><p>use <code>window.events.emit(&#39;custom-event&#39;)</code> to emit event and use <code>window.events.on(&#39;custom-event&#39;, cb)</code> to do something when custom-event happens.</p>
+</li>
+</ul>
+<h2 id="2-Say"><a href="#2-Say" class="headerlink" title="2 Say"></a>2 Say</h2><ul>
+<li>It is not pleasant today. But after 23:00, it changes.</li>
+<li>Maybe I am sick. Well, everything is ok.</li>
+<li>good night.</li>
 </ul>
 
       
@@ -361,18 +377,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/06/07/2017-06-07/" rel="next" title="2017-06-07">
-                <i class="fa fa-chevron-left"></i> 2017-06-07
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/05/26/2017-05-26/" rel="prev" title="2017-05-26">
-                2017-05-26 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/01/22/2018-01-22/" rel="prev" title="2018-01-22">
+                2018-01-22 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -493,7 +505,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2-say"><span class="nav-number">1.</span> <span class="nav-text">2 say</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Note"><span class="nav-number">1.</span> <span class="nav-text">2 Note</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Say"><span class="nav-number">2.</span> <span class="nav-text">2 Say</span></a></li></ol></div>
             
 
           </div>
