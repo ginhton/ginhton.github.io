@@ -343,6 +343,9 @@
 <li>EDIT: When in ex-mode(:), you can indeed use C-r to paste from register into the minibuffer. Additionall,hy, you can switch to evil’s search module ( evvil-search-module ) in order to enable the same when searching with /. The evil search module also enables eil-delete-backward-word within the search minibuffer ( on C-w), as well as pasting the oword under the non-minibuffer’s cursor with C-r C-w.</li>
 <li>EDIT: and if you’re using ivy, M-m r y ( counsel-yank-pop – this allows you to search your kill ring, which includes a lengthier history of copied text than the evil registers) also works in the minibuffer.</li>
 <li>The <strong>dotspacemacs-emacs-leader-key</strong> is <strong>M-m</strong>, which means “Alt + m” in my keyboard.</li>
+<li>GOPATH 环境变量用于指定这样一些目录：除$GOROOT 之外的包含GO项目源代码和二进制文件的目录。go install 和 go 工具会用到 GOPATH：作为编译后的二进制的存放目的地和import包时的搜索路径。</li>
+<li>GOPATH 是一个路径列表，也就是可以同时指定多个目录。多个目录在Mac和Linux下通过”:”分割；Windows下通过”;”分割。</li>
+<li>个人建议GOPATH中别设置多个路径，甚至不显示指定GOPATH。有些地方建议在设置了GOPATH之后，将$GOPATH/bin加入PATH中，这样可以方便的运行go install好的二进制程序。然而，当存在GOPATH中存在的多个路径时，这种写法只会将最后一个路径跟上bin。 在mac或linux下可以通过这种方式解决：**${GOPATH//://bin:}/bin</li>
 </ul>
 
           
