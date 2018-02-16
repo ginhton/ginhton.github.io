@@ -345,7 +345,14 @@
 <li>The <strong>dotspacemacs-emacs-leader-key</strong> is <strong>M-m</strong>, which means “Alt + m” in my keyboard.</li>
 <li>GOPATH 环境变量用于指定这样一些目录：除$GOROOT 之外的包含GO项目源代码和二进制文件的目录。go install 和 go 工具会用到 GOPATH：作为编译后的二进制的存放目的地和import包时的搜索路径。</li>
 <li>GOPATH 是一个路径列表，也就是可以同时指定多个目录。多个目录在Mac和Linux下通过”:”分割；Windows下通过”;”分割。</li>
-<li>个人建议GOPATH中别设置多个路径，甚至不显示指定GOPATH。有些地方建议在设置了GOPATH之后，将$GOPATH/bin加入PATH中，这样可以方便的运行go install好的二进制程序。然而，当存在GOPATH中存在的多个路径时，这种写法只会将最后一个路径跟上bin。 在mac或linux下可以通过这种方式解决：**${GOPATH//://bin:}/bin</li>
+<li>个人建议GOPATH中别设置多个路径，甚至不显示指定GOPATH。有些地方建议在设置了GOPATH之后，将$GOPATH/bin加入PATH中，这样可以方便的运行go install好的二进制程序。然而，当存在GOPATH中存在的多个路径时，这种写法只会将最后一个路径跟上bin。 在mac或linux下可以通过这种方式解决：<strong>${GOPATH//://bin:}/bin</strong></li>
+<li>go-dep 原型依赖管理工具</li>
+<li>读书之法，莫贵于循序而致精。 – 宋-朱熹《性理精义》</li>
+<li>通过go build加上要编译的Go源文件名，我们即可以得到一个可执行文件，默认情况下这个文件的名字为源文件名去掉.go后缀。</li>
+<li>与build命令相比，install 命令在编译源码后还会将可执行文件或库文件安装到约定的目录下。</li>
+<li><strong>pip install: permission denied</strong>. We should really stop advising the use of sudo with pip install. It’s better to first try pip install –user. The  reason you shouldn’t use sudo is as follows: When you run pip with sudo, you are running arbitrary Python code from the Internet as a root user, which is quite a big security risk. If someone puts up a malicious project on PyPl and you install it, you give and attacker root access to your machine.</li>
+<li>Could you please elaborate?</li>
+<li>Flask的request.form和request.data有什么区别？首先使用这两个方法的前提是post或者put请求。两者的区别在于处理不同的mimetype类型的数据，返回值也不同。当minitype为application/x-www-form-urlencodeed或者multipart/form-data的时候，也就是我们所谓表单提交，访问request.form会返回一个包含解析过的表单对象的MultiDict,而request.data是空的。当flask遇到不能处理的mimetype时，请求的数据就不能被其他方式正常解析，这些方式包括request.form、request.json和request.files这几个常用的用来访问数据的属性。这时就把数据作为字符串存在request.data中。这里注意一下request.json需要application/json的mimetype类型。知道了这些处理数据的过程，那我们就可以对提交的数据进行拓展，定义一些自己专用的mimetype类型，并在Request类中定义处理专用mimetpe数据的方法，从而让我们实现更个性、与众不同的功能需求。</li>
 </ul>
 
           
