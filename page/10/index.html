@@ -247,6 +247,163 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/10/2017-05-10/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ginhton">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="悟">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/10/2017-05-10/" itemprop="url">
+                  2017-05-10
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-10T22:53:47+08:00">
+                2017-05-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="2-Note"><a href="#2-Note" class="headerlink" title="2 Note"></a>2 Note</h1><ul>
+<li><p><code>slice</code>: return specific items from current array. [start, end)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">arr.slice(start, end);</div></pre></td></tr></table></figure>
+</li>
+<li><p><code>splice</code>: remove specific items by giving {start, howmany}</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">arr.splice(start, howmany);</div></pre></td></tr></table></figure>
+</li>
+<li><p><code>slice</code> has no effect on the original array, but the <code>splice</code> will alter the array.</p>
+</li>
+<li>check if vim support clipboard<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vim --version | clipboard</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>the output maybe:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">-clipboard       +job             +path_extra      +user_commands</div><div class="line">+eval            +mouse_dec       +statusline      -xterm_clipboard</div></pre></td></tr></table></figure></p>
+<p>this means that my vim doesn’t support clipboard.<br>after search in web, I find the solution:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">apt-get install vim-gtk</div></pre></td></tr></table></figure></p>
+<p>after install, input the first command to check, the output will be like:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">+clipboard       +job             +path_extra      +user_commands</div><div class="line">+eval            +mouse_dec       +statusline      +xterm_clipboard</div></pre></td></tr></table></figure></p>
+<ul>
+<li><p>js: find an array’s max number</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [ <span class="number">1</span>, <span class="number">20</span>, <span class="number">2</span> ];</div><div class="line"><span class="built_in">Math</span>.max.apply(<span class="literal">null</span>, arr);</div><div class="line"></div><div class="line"><span class="comment">// another method</span></div><div class="line"><span class="comment">// bind this function to Array prototype</span></div><div class="line"><span class="built_in">Array</span>.prototype.max = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="built_in">Math</span>.max.apply(<span class="literal">null</span>, <span class="keyword">this</span>);</div><div class="line">&#125;;</div><div class="line">arr.max();</div></pre></td></tr></table></figure>
+</li>
+<li><p>js sort function need a function to sort, and the function needed should return 1 and -1 accordingly.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// may have error</span></div><div class="line">arr.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a,b</span>) </span>&#123;<span class="keyword">return</span> a &lt; b;&#125;);</div><div class="line"><span class="comment">// right</span></div><div class="line">arr.sort(<span class="function"><span class="keyword">function</span>(<span class="params">a,b</span>) </span>&#123;<span class="keyword">if</span> (a&lt;b) &#123;<span class="keyword">return</span> <span class="number">1</span>;&#125; <span class="keyword">else</span> <span class="keyword">return</span> <span class="number">-1</span>;&#125;);</div></pre></td></tr></table></figure>
+</li>
+<li><p><code>C-c ]</code>: remove current file from the list of agenda files </p>
+</li>
+<li><code>C-c [</code>: add current file to the list of agenda files. </li>
+</ul>
+<h1 id="2-Do"><a href="#2-Do" class="headerlink" title="2 Do"></a>2 Do</h1><ul>
+<li>freecodecamp. use a lot of time to find the math solution of the exercise.</li>
+<li><p>Mid-term check.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">论文要求必须是外国人写的</div><div class="line">封面不要有页眉和页脚</div><div class="line">论文中避免使用“我们”、“本文”等字眼，写得应该专业一些</div></pre></td></tr></table></figure>
+</li>
+<li><p>nap</p>
+</li>
+</ul>
+<h1 id="2-Say"><a href="#2-Say" class="headerlink" title="2 Say"></a>2 Say</h1><ul>
+<li>The morning is beautiful!</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/09/2017-05-09/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1510,155 +1667,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/01/2017-05-01/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ginhton">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="悟">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/05/01/2017-05-01/" itemprop="url">
-                  2017-05-01
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-05-01T21:07:18+08:00">
-                2017-05-01
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="2-Say"><a href="#2-Say" class="headerlink" title="2 Say"></a>2 Say</h1><ul>
-<li>今天是劳动节，感谢老爸老妈的辛勤劳动，让我能这么安逸</li>
-<li>从上上周室友回来到现在，玩了10天的王者农药，别的几乎也没有做什么。</li>
-<li>单单从感觉上来说，这一段时间无忧无虑，什么都没有考虑，日子就这样过去了。挺好的。</li>
-<li>室友有了新的女盆友，感觉挺不错的。希望他俩能好得久一些吧。有点小嫉妒。+。+</li>
-<li>感觉疯疯的玩过之后，对于正常的生活也不会抗拒，像是要切换到另一个MODE一样，似乎会很自然吧。</li>
-<li>希望之后的一段时间能做的比较认真，把毕设的这些东西好好写一写，做一做。</li>
-<li><strong>好像人总是会想更好的或者更懒的工作是啥？所以不开心。并且认为这是理所当然的</strong></li>
-<li>那么，当前的境况变好和变坏的概率应该是各一半吧，或者各占0.1，境况不变的可能性更高。</li>
-<li>那么，我读研的收益在哪里？只是能晚点工作吗？</li>
-<li>可选答案： </li>
-</ul>
-<ul>
-<li>提高编程能力</li>
-<li>阅读安全领域的书籍，并多做实践，并尝试参加安全类招聘的网上申请和测试。</li>
-<li>侧重课内知识和论文发表，为继续深造做准备。</li>
-<li>多接触有想法的人，也许会受到启发。</li>
-<li>其他。(希望我最终能够选择这个其他，我总想要赌一把。)</li>
-</ul>
-<ul>
-<li>总之，就是多了一些选择和考虑的时间。</li>
-<li>加油！</li>
-</ul>
-<h1 id="2-Do"><a href="#2-Do" class="headerlink" title="2 Do"></a>2 Do</h1><ul>
-<li>看一页论文</li>
-<li>看一页org说明文档</li>
-<li>使用org做简单的记录</li>
-<li>学习一点emacs的操作和使用</li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1708,7 +1716,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">113</span>
+                <span class="site-state-item-count">114</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
