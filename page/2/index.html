@@ -247,6 +247,276 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/03/2018-02-03/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ginhton">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="悟">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2018/02/03/2018-02-03/" itemprop="url">
+                  2018-02-03
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-03T18:45:15+08:00">
+                2018-02-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="2-Note"><a href="#2-Note" class="headerlink" title="2 Note"></a>2 Note</h2><ul>
+<li>喜欢次肉丸，甜甜圈</li>
+<li>爷爷奶奶身体还好。</li>
+<li>一定要记得使用源，源，源！天朝很多东西下载不了或者很慢！</li>
+</ul>
+<h2 id="2-Copy"><a href="#2-Copy" class="headerlink" title="2 Copy"></a>2 Copy</h2><ul>
+<li>google’s new repository: Xi Editor</li>
+<li>The xi editor project is an attempt to build a high quality text editor, using modern software engineering techniques. It is initially built for Mac OS X, using Cocoa for the user interface. There are also frontends for other operating systems available from third-party developes.</li>
+<li>Goals include:<ul>
+<li><strong>Incredibly high performance</strong>. All editing operation should commit and paint in under 16ms. The editor shoudl never make you wait for anything.</li>
+<li><strong>Beauty</strong>. The editor should fit well on a modern desktop, and not look like a throwback from the ‘80s or ‘90s. Text drawing should be done with the best technology available(Core Text on Mac, Directrite on Windows, etc.), and support Unicode fully.</li>
+<li><strong>Reliability</strong>. Crashing, hanging, or losing work should never happen.</li>
+<li><strong>Developer friendliness</strong>. It should be easy to customize xi editor, whether by adding plug-ins or hacking on the core.</li>
+</ul>
+</li>
+<li>Design and decisions</li>
+<li>Here are some of the design decisions, and motivation why they shoud contribute to the above goals:</li>
+<li>Separation into front-end and back-end modules. The front-end is responsible for presenting the user interface and drawing a screen full of text. The back-end (also known as “core”) holds the file buffers and is responsible for all potentially expensive editing operations.</li>
+<li>Native UI. Cross-platform UI toolkits never look and feel quite right. The best technology for building a UI is the native framework of the plaatform. On Mac, that’s Cocoa.</li>
+<li>Rust. The back-end needs to be extremely erformant. In particular, it should use little more memory than the buffers being edited. That level of performance is possible in C++, but Rust offers a much more reliable, and in many ways, higher level programming platform.</li>
+<li>A persistent rope data structure. Persistent ropes are efficient even for very large files. In addition, they present a simple interface to their clients - conceptually, they’re a sequence of characters just like a string, and the client need not be awre of any liternal structure.</li>
+<li>Asynchronous operations. The eidtor shoudl never, ever block and pervent the user form getting their work done. For example, autosave will spawn a sthread with a snpashot of the current editor buffer (the persistent rope data structure is copy-on-wirte so this operation is nearly free), which can then proceed to write out to disk at its leisure, while the buffer is still fully editable.</li>
+<li>Plug-ins over scriping. Most text editors have an associated scripting language for extending functionality. However, these languages are usually both more arcane and less powerful than “real” languages. The xi editor will communicate with plugins through pipes, letting them be written in any language, and making it easier to integrate with other systems such as version control, deep static analyzers of code, etc.</li>
+<li>JSON. the protocol for font-end / back-end communication, as well as between the back-end and plug-ins, is based on simple JSON messages. I considered binary foramts, but the actual improvement in performance would be completely in the noise. Using JSON considerably lowers friction for develping plug-ins, as it’s available out fo the box for most modern languages, and there are plenty of hte libraries available for the other ones.</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/02/2018-02-02/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ginhton">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="悟">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2018/02/02/2018-02-02/" itemprop="url">
+                  2018-02-02
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-02T22:52:11+08:00">
+                2018-02-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="2-Say"><a href="#2-Say" class="headerlink" title="2 Say"></a>2 Say</h1><ul>
+<li>Arrived at home safely and happily.</li>
+<li>Good night, guys.</li>
+<li>Good night, me.</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/31/2018-01-31/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1673,282 +1943,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/24/2018-01-23/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ginhton">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="悟">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2018/01/24/2018-01-23/" itemprop="url">
-                  2018-01-23
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-24T09:23:16+08:00">
-                2018-01-24
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="2-Note"><a href="#2-Note" class="headerlink" title="2 Note"></a>2 Note</h2><ul>
-<li><code>webContents</code> is an <code>EventEmitter</code>. it is responsible for rendering and controlling a web page and is a property of the <code>BrowserWindow</code> object. So there are many events callback can bind on this object.</li>
-<li><code>contents.loadURL(url[, options])</code>: loads the <code>url</code> in the window. The <code>url</code> must contain the protocol prefix, e.g. the <code>http://</code> or <code>file://</code>. </li>
-<li><code>BrowserWindow</code> creates and controls browser windows. It has <code>on(&#39;close&#39;, callback)</code>, <code>show</code>, <code>hide</code>, <code>loadURL(url[,options])</code> and other functions.</li>
-<li><code>Array.shift</code> will pop out the first item in array.</li>
-<li>Template literals are enclosed by the back-tick(` `) character instead of double or single quotes. Template literals can contain placeholders. These are indicated by the dollar sign and curly braces <strong>${expression}</strong>. </li>
-<li><p>Create a frameless window</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">const &#123;BrowserWindow&#125; = require(&apos;electron&apos;)</div><div class="line">let win = new BrowserWindow(&#123;width: 600, height: 480, frame: false&#125;);</div><div class="line">win.show()</div></pre></td></tr></table></figure>
-</li>
-<li><p>Frameless window is non-draggable. Apps need to specify <code>-webkit-app-region: drag</code> in CSS to tell Electron which regions are draggable, and apps can use <code>-webkit-app-region: no-drag</code> to exclude the non-draggable area from the draggable region. To make the whole window draggable, you can add  <code>-webkit-app-region: drag</code> as <code>body</code>\’s style.</p>
-</li>
-<li><p>use <code>window.events.emit(&#39;custom-event&#39;)</code> to emit event and use <code>window.events.on(&#39;custom-event&#39;, cb)</code> to do something when custom-event happens.</p>
-</li>
-</ul>
-<h2 id="2-Say"><a href="#2-Say" class="headerlink" title="2 Say"></a>2 Say</h2><ul>
-<li>It is not pleasant today. But after 23:00, it changes.</li>
-<li>Maybe I am sick. Well, everything is ok.</li>
-<li>good night.</li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/22/2018-01-22/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ginhton">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="悟">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2018/01/22/2018-01-22/" itemprop="url">
-                  2018-01-22
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-22T16:30:00+08:00">
-                2018-01-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="2-Note"><a href="#2-Note" class="headerlink" title="2 Note"></a>2 Note</h2><ul>
-<li>start to do something at 16:33. I admit I am a little lazy or something like that.</li>
-<li>The repository I will learn today is <strong>ffmpeg-libav-tutorial</strong>.</li>
-<li>The basic idea behind a video is <strong>a series of pictures / frames running at a given rate</strong>.</li>
-<li><strong>CODEC</strong> is an electronic circuit or software that compresses or decompresses digital audio/video.</li>
-<li><strong>.webm</strong> file havs <strong>vp9</strong> and <strong>opus</strong> sections. <strong>.mp4</strong> file has <strong>h264</strong> and <strong>aac</strong> sections.</li>
-<li><strong>Transcoding</strong> is the act of converting one of the streams (audio or video) from one CODEC to another one.</li>
-<li><strong>TransMuxing</strong> is the act of converting from one format (container) to another one.</li>
-<li><strong>Transrating</strong> is the act of changing the bit rate, or producint other renditions.</li>
-<li><strong>Transsizing</strong> is the act of converting from one resolution to another one. As said before transsizing is often used with transrating.</li>
-<li>When we are designing a video player we need to play each frame at a given pace. Each frame has a presentation timestamp (PTS) which is an increasing number factored in a timebase that is a ration number (where the denominator is known as timescale) divisilbe by the frame rate (fps).</li>
-</ul>
-<h2 id="2-Say"><a href="#2-Say" class="headerlink" title="2 Say"></a>2 Say</h2><ul>
-<li>a simple day with 3 things done and with a small pity.</li>
-<li>I wish I could have a better tomorrow.</li>
-<li>good night.</li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1998,7 +1992,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">114</span>
+                <span class="site-state-item-count">116</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
