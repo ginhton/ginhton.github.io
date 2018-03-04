@@ -247,6 +247,145 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/24/2018-01-23/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ginhton">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="悟">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2018/01/24/2018-01-23/" itemprop="url">
+                  2018-01-23
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-24T09:23:16+08:00">
+                2018-01-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="2-Note"><a href="#2-Note" class="headerlink" title="2 Note"></a>2 Note</h2><ul>
+<li><code>webContents</code> is an <code>EventEmitter</code>. it is responsible for rendering and controlling a web page and is a property of the <code>BrowserWindow</code> object. So there are many events callback can bind on this object.</li>
+<li><code>contents.loadURL(url[, options])</code>: loads the <code>url</code> in the window. The <code>url</code> must contain the protocol prefix, e.g. the <code>http://</code> or <code>file://</code>. </li>
+<li><code>BrowserWindow</code> creates and controls browser windows. It has <code>on(&#39;close&#39;, callback)</code>, <code>show</code>, <code>hide</code>, <code>loadURL(url[,options])</code> and other functions.</li>
+<li><code>Array.shift</code> will pop out the first item in array.</li>
+<li>Template literals are enclosed by the back-tick(` `) character instead of double or single quotes. Template literals can contain placeholders. These are indicated by the dollar sign and curly braces <strong>${expression}</strong>. </li>
+<li><p>Create a frameless window</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">const &#123;BrowserWindow&#125; = require(&apos;electron&apos;)</div><div class="line">let win = new BrowserWindow(&#123;width: 600, height: 480, frame: false&#125;);</div><div class="line">win.show()</div></pre></td></tr></table></figure>
+</li>
+<li><p>Frameless window is non-draggable. Apps need to specify <code>-webkit-app-region: drag</code> in CSS to tell Electron which regions are draggable, and apps can use <code>-webkit-app-region: no-drag</code> to exclude the non-draggable area from the draggable region. To make the whole window draggable, you can add  <code>-webkit-app-region: drag</code> as <code>body</code>\’s style.</p>
+</li>
+<li><p>use <code>window.events.emit(&#39;custom-event&#39;)</code> to emit event and use <code>window.events.on(&#39;custom-event&#39;, cb)</code> to do something when custom-event happens.</p>
+</li>
+</ul>
+<h2 id="2-Say"><a href="#2-Say" class="headerlink" title="2 Say"></a>2 Say</h2><ul>
+<li>It is not pleasant today. But after 23:00, it changes.</li>
+<li>Maybe I am sick. Well, everything is ok.</li>
+<li>good night.</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/22/2018-01-22/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1408,133 +1547,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/14/2018-01-14/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ginhton">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="悟">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2018/01/14/2018-01-14/" itemprop="url">
-                  2018-01-14
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-14T22:08:25+08:00">
-                2018-01-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="2-Note"><a href="#2-Note" class="headerlink" title="2 Note"></a>2 Note</h1><ul>
-<li>星期天洗了个澡，美滋滋</li>
-<li>learn from github repo <strong>30-seconds-of-code</strong> nearly whole day.</li>
-<li>watch videos in Bilibili from time to time.</li>
-<li>Listened several songs, knowing that some beautiful time has passed long ago.</li>
-<li>if want to learn more, just keep learn for one more minute.</li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1584,7 +1596,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">125</span>
+                <span class="site-state-item-count">126</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
