@@ -353,6 +353,9 @@
 <li><p>Get the raw pixel data as a Unit8Array with every 4 array elements representing the RGBA data of a pixel:</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> node = <span class="built_in">document</span>.getElementById(<span class="string">'my-node'</span>);</div><div class="line"></div><div class="line">domtoimage.toPixelData(node)</div><div class="line">.then(<span class="function"><span class="keyword">function</span> (<span class="params">pixels</span>) </span>&#123;</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> y = <span class="number">0</span>; y &lt; node.scrollHeight; ++y) &#123;</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> x = <span class="number">0</span>; x &lt; node.scrollWidth; ++x) &#123;</div><div class="line">pixelAtXYOffset = (<span class="number">4</span> * y * node.scrollHeight) + (<span class="number">4</span> * x);</div><div class="line">pixelAtXY = pixels.slice(pixelAtXYOffset, pixelAtXYOffset + <span class="number">4</span>);</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 </li>
+<li><p>The show must gon on</p>
+</li>
+<li>crave v. 渴望；恳求</li>
 </ul>
 
           
