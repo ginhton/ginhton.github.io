@@ -247,6 +247,273 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/26/2018-01-26/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ginhton">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="悟">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2018/01/26/2018-01-26/" itemprop="url">
+                  2018-01-26
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-26T09:44:00+08:00">
+                2018-01-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="2-Say"><a href="#2-Say" class="headerlink" title="2 Say"></a>2 Say</h2><ul>
+<li>Enjoy current time.</li>
+<li>Life’s too short and precious not to be lived with a smile on your face.</li>
+<li>Time does heal all wounds.</li>
+<li>I am unable to do many things. Maybe I will know what life wants to tell me someday.</li>
+</ul>
+<h2 id="2-Note"><a href="#2-Note" class="headerlink" title="2 Note"></a>2 Note</h2><ul>
+<li>just start no matter when.</li>
+<li>Still confused about how code is working. But have to go to next chapter.</li>
+<li>Good Night! Keep on going!</li>
+</ul>
+<h2 id="2-Copy"><a href="#2-Copy" class="headerlink" title="2 Copy"></a>2 Copy</h2><ul>
+<li>决策树 概述<ul>
+<li>决策树算法主要用来处理分类问题，是最经常被使用的数据挖掘算法之一。</li>
+</ul>
+</li>
+<li>决策树 场景<ul>
+<li>一个叫做“二十个问题”的游戏，游戏的规则很简单：参与游戏的一方在脑海中想某个事物，其他参与者向他提问，只允许提20个问题，问题的答案也只能用对或者错回答。问问题的人通过推断分解，逐步缩小待猜测事物的范围，最后得到游戏的答案。</li>
+</ul>
+</li>
+<li>决策树 原理<ul>
+<li>信息熵 &amp; 信息增益<ul>
+<li>熵：熵指的是体系的混乱的程度，在不同的学科中也有引申出的更为具体的定义，是各邻域十分重要的参量。</li>
+<li>信息熵：是一种信息的度量方式，表示信息的混乱程度，也就是说：信息越有序，信息熵越低。例如：火柴有序放在火柴盒里，熵值很低，相反，熵值很高。</li>
+<li>信息增益：在划分数据集前后信息发生的变化成为信息增益。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li>决策树 工作原理<ul>
+<li>如何构造一个决策树？</li>
+<li>我们使用createBranch()方法，如下所示：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">If so return 类标签</div><div class="line">Else:</div><div class="line">  寻找划分数据集的最好特征（划分之后信息熵最小，也就是信息增益最大的特征）</div><div class="line">  划分数据集</div><div class="line">  创建分支节点</div><div class="line">    for 每个划分的子集</div><div class="line">      调用函数 createBranch (创建分支的函数) 并增加返回结果到分支节点中</div><div class="line">  return 分支节点</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>决策树 开发流程</p>
+<ul>
+<li>收集数据： 可以使用任何方法</li>
+<li>准备数据： 树构造算法只适用于标称型数据，因此数值型数据必须离散化。</li>
+<li>分析数据： 可以使用任何方法，构造树完成之后，我们应该检查图形是否符合预期。</li>
+<li>训练算法： 构造树的数据结构。</li>
+<li>测试算法： 使用经验树计算错误率。</li>
+<li>使用算法： 此步骤可以使用于任何监督学习算法，而使用决策树可以更好的理解数据的内在含义。</li>
+</ul>
+</li>
+<li><p>决策树 算法特点</p>
+<ul>
+<li>优点： 计算复杂度不高；输出结果易于理解，对中间值的缺失不敏感，可以处理不相关特征数据。</li>
+<li>缺点： 可能会产生过度匹配问题。</li>
+<li>适用数据类型： 数值型和标称型。</li>
+</ul>
+</li>
+<li><p>决策树 项目案例 - 1 - 判定鱼类和非鱼类</p>
+<ul>
+<li>项目概述：根据以下两个特征，将动物分成两类：鱼类和非鱼类。特征：1.不浮出水面是否可以生存 2.是否有脚蹼</li>
+<li>开发流程<ul>
+<li>收集数据： 可以使用任何方法</li>
+<li>准备数据： 树构造算法只使用与标称型数据，因此数值型数据必须离散化</li>
+<li>分析数据： 可以使用任何方法，构造树完成之后，我们应该检查图形是否符合预期</li>
+<li>训练算法： 构造树的数据结构</li>
+<li>测试算法： 使用决策树执行分类</li>
+<li>使用算法： 此步骤可以适用于任何监督学习算法，而使用决策树可以更好的理解数据的内在含义。</li>
+</ul>
+</li>
+<li><p>收集数据</p>
+<ul>
+<li>我们利用 createDataSet() 函数输入数据<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">createDataSet</span><span class="params">()</span>:</span></div><div class="line">  dataSet = [[<span class="number">1</span>, <span class="number">1</span>, <span class="string">'yes'</span>],</div><div class="line">  [<span class="number">1</span>, <span class="number">1</span>, <span class="string">'yes'</span>],</div><div class="line">  [<span class="number">1</span>, <span class="number">0</span>, <span class="string">'no'</span>],</div><div class="line">  [<span class="number">0</span>, <span class="number">1</span>, <span class="string">'no'</span>],</div><div class="line">  [<span class="number">0</span>, <span class="number">1</span>, <span class="string">'no'</span>]]</div><div class="line">  labels = [<span class="string">'no surfacing'</span>, <span class="string">'flippers'</span>]</div><div class="line">  <span class="keyword">return</span> dataSet, labels</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>准备数据</p>
+<ul>
+<li>此处，我们输入的数据本身就是离散化数据，所以这一步就省略了。</li>
+</ul>
+</li>
+<li><p>分析数据</p>
+<ul>
+<li><p>计算给定数据集的香农熵的函数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">calcShannonEnt</span><span class="params">(dataSet)</span>:</span></div><div class="line">  <span class="comment"># 求list的长度，表示计算参与训练的数据量</span></div><div class="line">  numEntires = len(dataSet)</div><div class="line">  <span class="comment"># 计算分类标签label出现的次数</span></div><div class="line">  labelCounts = &#123;&#125;</div><div class="line">  <span class="comment"># the number of unique elements and their occurance</span></div><div class="line">  <span class="keyword">for</span> featVec <span class="keyword">in</span> dataSet:</div><div class="line">    <span class="comment"># 将当前实例的标签存储， 即每一行数据的最后一个数据代表的是标签</span></div><div class="line">    currentLabel = featVec[<span class="number">-1</span>]</div><div class="line">    <span class="comment"># 为所有可能的分在创建字典，如果当时的键值不存在，则拓展字典并将当前键值加入字典。每个键值都记录了当前类别出现的次数。</span></div><div class="line">    <span class="keyword">if</span> currentLabel <span class="keyword">not</span> <span class="keyword">in</span> labelCounts.keys():</div><div class="line">      labelCounts[currentLabel] = <span class="number">0</span></div><div class="line">    labelCounts[currentLabel] += <span class="number">1</span></div><div class="line">    </div><div class="line">   <span class="comment"># 对于label 标签的占比，求出label标签的香农熵</span></div><div class="line">   shannonEnt = <span class="number">0.0</span></div><div class="line">   <span class="keyword">for</span> key <span class="keyword">in</span> labelCounts:</div><div class="line">     <span class="comment"># 使用所有类标签的发生频率计算类别出现的频率。</span></div><div class="line">     prob = float(labelCounts[key])/numEntries</div><div class="line">     <span class="comment"># 计算香农熵，以2为底求对数</span></div><div class="line">     shannonEnt -= prob * log(prob, <span class="number">2</span>)</div><div class="line">   <span class="keyword">return</span> shannonEnt</div></pre></td></tr></table></figure>
+</li>
+<li><p>按照给定特征划分数据集: 将指定特征的特征值等于value 的行剩下作为子数据集</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">splitDataSet</span><span class="params">(dataSet, index, value)</span>:</span></div><div class="line">   <span class="string">"""</span></div><div class="line">   splitDataSet(通过便利dataSet数据集，求出index对应的colnum列的值为value的行)</div><div class="line">   就是依据index列进行分类，如果index列的数据等于value的时候，就要将index划分到我们创建的心的数据集中</div><div class="line">   Args:</div><div class="line">     dataSet 数据集 待划分的数据集</div><div class="line">     index 表示每一行的index列 划分数据集的特征</div><div class="line">     value 表示index列对应的value值 需要返回的特征的值</div><div class="line">   Returns:</div><div class="line">     index列为value的数据集【该数据集需要排除index列】</div><div class="line">    """</div><div class="line">    retDataSet = []</div><div class="line">    <span class="keyword">for</span> featVec <span class="keyword">in</span> dataSet:</div><div class="line">      <span class="comment"># index列为value的数据集【该书籍集需要排除index列】</span></div><div class="line">      <span class="comment"># 判断index列的值是否为value</span></div><div class="line">      <span class="keyword">if</span> featVec[index] == value:</div><div class="line">        <span class="comment"># chop out index used for splitting</span></div><div class="line">        <span class="comment"># [:index] 表示前index行，即若index为2,就是取featVec的前index行</span></div><div class="line">        reducedFeatVec = featVec[:index]</div><div class="line">      reducedFeatVec.extend(featVec[index+<span class="number">1</span>:])</div><div class="line">      <span class="comment"># [index+1:]表示从跳过index的index+1行，取接下来的数据</span></div><div class="line">      <span class="comment"># 收集结果值 index列为value的行【该行需要排除index列】</span></div><div class="line">      retDataSet.append(reducedFeatVec)</div><div class="line">retrn retDataSet</div></pre></td></tr></table></figure>
+</li>
+<li><p>选择最好的数据集划分方式</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">chooseBestFeatureToSplit</span><span class="params">(dataSet)</span>:</span></div><div class="line"><span class="string">"""</span></div><div class="line">Args:</div><div class="line">  dataSet 数据集</div><div class="line">Returns:</div><div class="line">  bestFeature 最优的特征列</div><div class="line">"""</div><div class="line"><span class="comment"># 求第一行有多少列的Feature，最后一列是label列</span></div><div class="line">numFeatures = len(dataSet[<span class="number">0</span>]) - <span class="number">1</span></div><div class="line"><span class="comment"># 数据集的原始信息熵</span></div><div class="line">baseEntropy = calcShannonEnt(dataSet)</div><div class="line"><span class="comment"># 最优的信息增益值，和最优的Featurn编号</span></div><div class="line">bestInfoGain, bestFeature = <span class="number">0.0</span>, <span class="number">-1</span></div><div class="line"><span class="comment"># iterate over all the features</span></div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(numFeatures):</div><div class="line">  <span class="comment"># create a list of all the examples of this feature</span></div><div class="line">  <span class="comment"># 获取对应的feature下的所有数据</span></div><div class="line">  featList = [example[i] <span class="keyword">for</span> example <span class="keyword">in</span> dataSet]</div><div class="line">  <span class="comment"># get a set of unique values</span></div><div class="line">  <span class="comment"># 获取剔重后的集合，使用set对list数据进行去重</span></div><div class="line">  uniqueVals = set(featList)</div><div class="line">  <span class="comment"># 创建一个临时的信息熵</span></div><div class="line">  newEntropy = <span class="number">0.0</span></div><div class="line">  <span class="comment"># 遍历某一列的value集合，计算该列的信息熵</span></div><div class="line">  <span class="comment"># 遍历当前特征中的所有唯一属性值，对每个唯一属性值划分一次数据集，计算数据集的新熵值，并对所有唯一特征值得到的熵求和。</span></div><div class="line">  <span class="keyword">for</span> value <span class="keyword">in</span> uniqueVals:</div><div class="line">    subDataSet = splitDataSet(dataSet, i, value)</div><div class="line">    <span class="comment"># 计算概率</span></div><div class="line">    prob = len(subDataSet)/float(len(dataSet))</div><div class="line">    <span class="comment"># 计算信息熵</span></div><div class="line">    newEntropy += prob * calcShannonEnt(subDataSet)</div><div class="line"><span class="comment"># gain[信息增益]: 划分数据集前后的信息变化，获取信息熵的最大值</span></div><div class="line"><span class="comment"># 西捏成增益是熵的减少或者是数据无序度的减少。最后，比较所有特征中的信息增益，返回最好特征划分的索引值。</span></div><div class="line">infoGain = baseEntropy - newEntropy</div><div class="line"><span class="keyword">print</span> (<span class="string">'infoGain='</span>, infoGain, <span class="string">'bestFeature='</span>, i, baseEntropy, newEntropy)</div><div class="line"><span class="keyword">if</span> (infoGain &gt; bestInfoGain):</div><div class="line">  bestInfoGain = infoGain</div><div class="line">  bestFeature = i</div><div class="line"><span class="keyword">return</span> bestFeature</div></pre></td></tr></table></figure>
+</li>
+<li><p>问： 上面的 newEntropy 为什么是根据子集计算的呢？</p>
+</li>
+<li>答： 因为我们在根据一个特征计算香农熵的时候，该特征的分类值是相同，这个特征这个分类的香农熵为0;这就是为什么计算新的香农熵的时候使用的是子集。</li>
+</ul>
+</li>
+<li><p>训练算法：构造树的数据结构</p>
+<ul>
+<li>创建树的函数代码如下：<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">createTree</span><span class="params">(dataSet, labels)</span>:</span></div><div class="line">  classList = [example[<span class="number">-1</span>] <span class="keyword">for</span> example <span class="keyword">in</span> dataSet]</div><div class="line">  <span class="comment"># 如果数据集的最后一列的第一个值出现的次数=整个集合的数量，也就说只有一个类别，就只直接返回结果。</span></div><div class="line">  <span class="comment"># 第一个停止条件： 所有的列标签完全相同，则直接返回该类标签。</span></div><div class="line">  <span class="comment"># count() 函数是统计括号中的值在list中出现的次数</span></div><div class="line">  <span class="keyword">if</span> classList.count(classList[<span class="number">0</span>]) == len(classList):</div><div class="line">    <span class="keyword">return</span> classList[<span class="number">0</span>]</div><div class="line">  <span class="comment"># 如果数据集只有1列，那么最初出现的label次数最多的一类，作为结果</span></div><div class="line">  <span class="comment"># 第二个停止条件： 使用万了所有特征，仍然不能将数据集划分成仅包含唯一类别的分组。</span></div><div class="line">  <span class="keyword">if</span> len(dataSet[<span class="number">0</span>]) == <span class="number">1</span>:</div><div class="line">    <span class="keyword">return</span> majorityCnt(classList)</div><div class="line">    </div><div class="line">  <span class="comment"># 选择最优的列，得到最优列对应的label含义</span></div><div class="line">  bestFeat = chooseBestFeatureToSplit(dataSet)</div><div class="line">  <span class="comment"># 获取label的名称</span></div><div class="line">  bestFeatLabel = labels[bestFeat]</div><div class="line">  <span class="comment"># 初始化myTree</span></div><div class="line">  myTree = &#123;bestFeatLabel: &#123;&#125;&#125;</div><div class="line">  <span class="comment"># 注：labels列表是可变对象，在PYTHON函数中作为参数时传址引用，能够被全局修改</span></div><div class="line">  <span class="comment"># 所以这行代码导致函数外的同名变量被删除了元素，造成例句无法执行，提示'no surfacing' is not in list</span></div><div class="line">  <span class="keyword">del</span>(labels[bestFeat])</div><div class="line">  <span class="comment"># 取出最优列，然后它的branch做分类</span></div><div class="line">  featValues = [example[bestFeat] <span class="keyword">for</span> example <span class="keyword">in</span> dataSet]</div><div class="line">  uniqueVals = set(featValues)</div><div class="line">  <span class="keyword">for</span> value <span class="keyword">in</span> uniqueVals:</div><div class="line">    <span class="comment"># 求出剩余的标签label:</span></div><div class="line">    subLabels = labels[:]</div><div class="line">    <span class="comment"># 遍历当前选择特征包含的所有属性值，在每个数据集划分上递归调用函数createTree()</span></div><div class="line">    myTree[bestFeatLabel][value] = createTree(splitDataSet(dataSet, bestFeat, value), subLabels)</div><div class="line">    <span class="comment"># print 'myTree', value , my Tree</span></div><div class="line">  <span class="keyword">return</span> myTree</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p>测试算法： 使用决策树进行分类</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">classify</span><span class="params">(inputTree, featLabels, testVec)</span>:</span></div><div class="line">  <span class="string">"""classify(给输入的节点， 进行分类)</span></div><div class="line">  </div><div class="line">  Args:</div><div class="line">    inputTree 决策树模型</div><div class="line">    featLabels Feature标签对应的名称</div><div class="line">    testVec 测试输入的数据</div><div class="line">  Returns:</div><div class="line">    classLabel 分类的结果值，需要映射label才能知道名称</div><div class="line">  """</div><div class="line">  <span class="comment"># 获取tree的根节点对应的key值</span></div><div class="line">  firstStr = inputTree.keys()[<span class="number">0</span>]</div><div class="line">  <span class="comment"># 通过key得到跟节点对应的value</span></div><div class="line">  secondDict = inputTree[firstStr]</div><div class="line">  <span class="comment"># 判断根节点名称获取根节点在label中的先后顺序，这样就知道输入的testVec怎么开始对照树来做分类</span></div><div class="line">  featIndex = featLabels.index(firstStr)</div><div class="line">  <span class="comment"># 测试数据，找到根节点对应的label的位置，也就知道从输入的数据的第几位来开始分类</span></div><div class="line">  key = testVec[featIndex]</div><div class="line">  valueOfFeat = secondDict[key]</div><div class="line">  <span class="keyword">print</span> (<span class="string">'+++'</span>, firstStr, <span class="string">'xxx'</span>, secondDict, <span class="string">'---'</span>, key, <span class="string">'&gt;&gt;&gt;'</span>, valueOfFeat)</div><div class="line">  <span class="comment"># 判断分支是否结束：判断valueOfFeat是否是dict类型</span></div><div class="line">  <span class="keyword">if</span> isinstance(valueOfFeat, dict):</div><div class="line">    classLabel = classify(valueOfFeat, featLabels, testVec)</div><div class="line">  <span class="keyword">else</span>: </div><div class="line">    classLabel = valueOfFeat</div><div class="line">  <span class="keyword">return</span> classLabel</div></pre></td></tr></table></figure>
+</li>
+<li><p>使用算法： 此步骤可以适用于任何监督学习算法，而使用决策树可以更好的理解数据的内在含义。</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>项目案例 - 2 - 使用决策树预测隐形眼镜类型</p>
+<ul>
+<li>项目概述： 隐形眼镜类型包括硬材质、软材质以及不适合佩戴隐形眼镜。我们需要使用决策树也册患者需要佩戴的隐形眼镜类型。</li>
+<li>开发流程：<ol>
+<li>收集数据： 提供的文本文件。</li>
+<li>解析数据： 解析tab键分隔的数据行</li>
+<li>分析数据： 快速检查数据，确保正确的解析数据内容，使用createPlot()函数绘制最终的树形图。</li>
+<li>训练算法： 使用createTree() 函数</li>
+<li>测试算法： 编写测试函数验证决策树可以正确分类给定的数据实例。</li>
+<li>使用算法： 存储树的数据结构，一边下次使用时无需重新构造树。</li>
+</ol>
+</li>
+<li><p>收集数据： 提供的文本文件</p>
+<ul>
+<li>文本文件数据格式如下：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">young myope no reduced no lenses</div><div class="line">pre myope no reduced no lenses</div><div class="line">presbyopic myope no reduced no lenses</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>解析数据： 解析tab键分隔的数据行</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">lecses = [inst.strip().split(<span class="string">'\t'</span>) <span class="keyword">for</span> inst <span class="keyword">in</span> fr.readlines()]</div><div class="line">lensesLabels = [<span class="string">'age'</span>, <span class="string">'prescript'</span>, <span class="string">'astigmatic'</span>, <span class="string">'tearRate'</span>]</div></pre></td></tr></table></figure>
+</li>
+<li><p>分析数据：快速检查数据，确保正确地解析数据内容，使用createPlot()函数绘制最终的树形图。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">treePlotter.createPlot(lensesTree)</div></pre></td></tr></table></figure>
+</li>
+<li><p>训练算法： 使用createTree()函数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">lensesTree = trees.createTree(lenses, lensesLabels)</div><div class="line"><span class="keyword">print</span> lensesTree</div></pre></td></tr></table></figure>
+</li>
+<li><p>测试算法： 编写测试函数验证决策树可以正确分类给定的数据实例</p>
+</li>
+<li>使用算法： 存储树的数据结构，一边下次使用时无需重新构造树。<ul>
+<li>使用pickle模块存储决策树<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">storeTree</span><span class="params">(inputTree, filename)</span>:</span></div><div class="line">  <span class="keyword">import</span> pickle</div><div class="line">  fw = open(filename, <span class="string">'w'</span>)</div><div class="line">  pickle.dump(inputTree， fw)</div><div class="line">  fw.close()</div><div class="line">  </div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">grabTree</span><span class="params">(filename)</span>:</span></div><div class="line">  <span class="keyword">import</span> pickle</div><div class="line">  fr = open(filename)</div><div class="line">  <span class="keyword">return</span> pickle.load(fr)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/25/2018-01-25/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1603,133 +1870,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/16/2018-01-16/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ginhton">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="悟">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2018/01/16/2018-01-16/" itemprop="url">
-                  2018-01-16
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-16T10:06:17+08:00">
-                2018-01-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="2-Note"><a href="#2-Note" class="headerlink" title="2 Note"></a>2 Note</h1><ul>
-<li>SunPinyin 在Ubuntu 16.04以及以上版本不能打开设置面板的问题解决：<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">download deb from https://ubuntu.pkgs.org/14.04/ubuntu-main-amd64/python-ibus_1.5.5-1ubuntu3_all.deb.html</div><div class="line">sudo dpkg -i python-ibus_1.5.5-1ubuntu3_all.deb</div><div class="line">sudo apt-get install <span class="_">-f</span> </div><div class="line">ibus-daemon -drx</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h1 id="2-Say"><a href="#2-Say" class="headerlink" title="2 Say"></a>2 Say</h1><ul>
-<li>突然怀念那种，突然剧烈思念某人却手足无措，的心情。真是美丽~</li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1779,7 +1919,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">128</span>
+                <span class="site-state-item-count">129</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
