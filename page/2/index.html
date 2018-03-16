@@ -247,6 +247,503 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/05/2018-03-05/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ginhton">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="悟">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2018/03/05/2018-03-05/" itemprop="url">
+                  2018-03-05
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-05T06:51:00+08:00">
+                2018-03-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="2-Thank"><a href="#2-Thank" class="headerlink" title="2 Thank"></a>2 Thank</h2><ul>
+<li>Thank your voice. 真的帅的不行</li>
+<li>I feel peaceful today. Write some code about <code>getChart</code> and feel good from doing it. Listen to music. Write blog. Take class. And follow my heart to play and study. I will try to do something about main task and prepare something for future work.</li>
+<li><img src="./images/2018-03-05.png" alt="daily-graph"></li>
+</ul>
+<h2 id="2-Note"><a href="#2-Note" class="headerlink" title="2 Note"></a>2 Note</h2><ul>
+<li>nodejs get commandline parameter: <code>process.argv.splice(2)</code></li>
+<li>nodejs read/write file: fs.readFile(path, function(err, data)), fs.writeFile(path, data, function(err))</li>
+<li>hexo set <strong>skip_render</strong>: edit <code>_config.yml</code> file, and then run <code>hexo clean</code>. Otherwise it will not take effect.</li>
+<li><p>use script to download file</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> link = <span class="built_in">document</span>.createElement(<span class="string">'a'</span>)</div><div class="line">link.download = <span class="string">'image-name.jpeg'</span></div><div class="line">link.href = dataUrl;</div><div class="line">link.click();</div></pre></td></tr></table></figure>
+</li>
+<li><p><code>awesome-selfhosted</code>: This is a list of Free Software network srevices and web applications which can be hosted locally. Selfhosting is the process of locally hosting and managing applications instead of renting from SaaS providers.</p>
+</li>
+<li>关于github pages绑定域名的方法： 1.需要在域名运营商处设置CNAME解析到github pages链接。2.需要在对应repo的settings里面设置custom domain.</li>
+</ul>
+<h2 id="2-Copy"><a href="#2-Copy" class="headerlink" title="2 Copy"></a>2 Copy</h2><ul>
+<li><code>DOM to Image</code>: <strong>dom-to-image</strong> is a library which can turn arbitrary DOM node into a vector (SVG) or raster (PNG or JPEG) image, written in JavaScript. It’s based on domvas by Paul Bakaus and has been compeletely rewritten, with some bugs fixed and some new features (like web font and image support) added.</li>
+<li>All the top level functions accept DOM node and rendering options, and return promises, which are fulfilled with corresponding data URLs.</li>
+<li><p>Get a PNG image base64-encoded data URL and display right away:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> node = <span class="built_in">document</span>.getElementById(<span class="string">'my-node'</span>);</div><div class="line"></div><div class="line">domtoimage.toPng(node)</div><div class="line">.then(<span class="function"><span class="keyword">function</span> (<span class="params">dataUrl</span>) </span>&#123;</div><div class="line"><span class="keyword">var</span> img = <span class="keyword">new</span> Image();</div><div class="line">img.src = dataUrl;</div><div class="line"><span class="built_in">document</span>.body.appendChild(img);&#125;)</div><div class="line">.catch(<span class="function"><span class="keyword">function</span> (<span class="params">error</span>) </span>&#123;</div><div class="line"><span class="built_in">console</span>.error(<span class="string">'oops, something went wrong!'</span>, error)&#125;);</div></pre></td></tr></table></figure>
+</li>
+<li><p>Get a PNG image blob and download it (using FileSaver, for example):</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">domtoimage.toBlob(<span class="built_in">document</span>.getElementById(<span class="string">'my-node'</span>))</div><div class="line">.then(<span class="function"><span class="keyword">function</span> (<span class="params">blob</span>) </span>&#123;</div><div class="line"><span class="built_in">window</span>.saveAs(blob, <span class="string">'my-node.png'</span>);&#125;);</div></pre></td></tr></table></figure>
+</li>
+<li><p>Save and download a compressed JPEG image:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">domtoimage.toJpeg(<span class="built_in">document</span>.getElementById(<span class="string">'my-node'</span>), &#123;<span class="attr">quality</span>: <span class="number">0.95</span>&#125;)</div><div class="line">.then(<span class="function"><span class="keyword">function</span> (<span class="params">dataUrl</span>) </span>&#123;</div><div class="line"><span class="keyword">var</span> link = <span class="built_in">document</span>.createElement(<span class="string">'a'</span>);</div><div class="line">link.download = <span class="string">'my-image-name.jpeg'</span>;</div><div class="line">link.href = dataUrl;</div><div class="line">link.click();</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+</li>
+<li><p>Get an SVG data URL, but filter out all the <i> elements:</i></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">filter</span> (<span class="params">node</span>) </span>&#123;</div><div class="line"><span class="keyword">return</span> (node.tagName !== <span class="string">'i'</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line">domtoimage.toSvg(<span class="built_in">document</span>.getElementById(<span class="string">'my-node'</span>), &#123;<span class="attr">filter</span>: filter&#125;)</div><div class="line">.then(<span class="function"><span class="keyword">function</span>  (<span class="params">dataUrl</span>) </span>&#123;</div><div class="line"><span class="comment">/* do something */</span></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+</li>
+<li><p>Get the raw pixel data as a Unit8Array with every 4 array elements representing the RGBA data of a pixel:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> node = <span class="built_in">document</span>.getElementById(<span class="string">'my-node'</span>);</div><div class="line"></div><div class="line">domtoimage.toPixelData(node)</div><div class="line">.then(<span class="function"><span class="keyword">function</span> (<span class="params">pixels</span>) </span>&#123;</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> y = <span class="number">0</span>; y &lt; node.scrollHeight; ++y) &#123;</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> x = <span class="number">0</span>; x &lt; node.scrollWidth; ++x) &#123;</div><div class="line">pixelAtXYOffset = (<span class="number">4</span> * y * node.scrollHeight) + (<span class="number">4</span> * x);</div><div class="line">pixelAtXY = pixels.slice(pixelAtXYOffset, pixelAtXYOffset + <span class="number">4</span>);</div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+</li>
+<li><p>The show must gon on</p>
+</li>
+<li>crave v. 渴望；恳求 kudos n. 光荣，荣誉 vererans n. 老兵 intimidating adj. 吓人的，令人胆怯的 to a degree 在某种程度上</li>
+<li>决策时必须考虑其他人的行动，决策者之间的相互依存正是博弈的实质。</li>
+<li>人总是尝试去理解解释一些东西，这是天性。但是如果不去想的话，会节省很多精力。</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/04/2018-03-04/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ginhton">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="悟">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2018/03/04/2018-03-04/" itemprop="url">
+                  2018-03-04
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-04T00:00:00+08:00">
+                2018-03-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="2-Thank"><a href="#2-Thank" class="headerlink" title="2 Thank"></a>2 Thank</h2><ul>
+<li>Thank for Yang and Du.</li>
+<li>今天过得平淡无奇，没有特别有成就感，也没有特别无聊。还算比较稳定。继续努力。</li>
+<li><img src="./images/2018-03-04.png" alt="daily-graph"></li>
+</ul>
+<h2 id="2-Note"><a href="#2-Note" class="headerlink" title="2 Note"></a>2 Note</h2><ul>
+<li>JSON.parse convert json string to json object</li>
+<li>JSON.jsonstringify convert json object to json string</li>
+<li>stupid me.</li>
+<li><p>how to get the value from the GET parameters</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> url_string = <span class="string">"http://www.example.com/t.html?a=1&amp;b=3&amp;c=m2-m3-m4-m5"</span>; <span class="comment">//window.location.href</span></div><div class="line"><span class="keyword">var</span> url = <span class="keyword">new</span> URL(url_string);</div><div class="line"><span class="keyword">var</span> c = url.searchParams.get(<span class="string">"c"</span>);</div><div class="line"><span class="built_in">console</span>.log(c);</div></pre></td></tr></table></figure>
+</li>
+<li><p>HTTP GET request in Javascript</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">function httpGet(theUrl)</div><div class="line">&#123;</div><div class="line">    var xmlHttp = new XMLHttpRequest();</div><div class="line">    xmlHttp.open( &quot;GET&quot;, theUrl, false ); // false for synchronous request</div><div class="line">    xmlHttp.send( null );</div><div class="line">    return xmlHttp.responseText;</div><div class="line">&#125;</div><div class="line"></div><div class="line">function httpGetAsync(theUrl, callback)</div><div class="line">&#123;</div><div class="line">    var xmlHttp = new XMLHttpRequest();</div><div class="line">    xmlHttp.onreadystatechange = function() &#123; </div><div class="line">        if (xmlHttp.readyState == 4 &amp;&amp; xmlHttp.status == 200)</div><div class="line">            callback(xmlHttp.responseText);</div><div class="line">    &#125;</div><div class="line">    xmlHttp.open(&quot;GET&quot;, theUrl, true); // true for asynchronous </div><div class="line">    xmlHttp.send(null);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>take a sleep when calling a sequence of await functions</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">sleep</span>(<span class="params">timeout</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="keyword">new</span> <span class="built_in">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</div><div class="line">    setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">      resolve();</div><div class="line">    &#125;, timeout);</div><div class="line">  &#125;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>puppeteer can take screenshot of website just by code in shell. And it has more interesting functions. I will find out that later.</p>
+</li>
+<li>Quora is a good place to get more knowledge.</li>
+</ul>
+<h2 id="2-Copy"><a href="#2-Copy" class="headerlink" title="2 Copy"></a>2 Copy</h2><ul>
+<li>life is easier if one doesn’t ask</li>
+<li>there is no purpose to life</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/03/2018-03-03/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ginhton">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="悟">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2018/03/03/2018-03-03/" itemprop="url">
+                  2018-03-03
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-03-03T14:25:00+08:00">
+                2018-03-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="2-Thank"><a href="#2-Thank" class="headerlink" title="2 Thank"></a>2 Thank</h2><ul>
+<li>愿你在这尘世获得幸福</li>
+<li>谢谢遇到的你们</li>
+<li><img src="./images/2018-03-03.png" alt="daily-graph"></li>
+</ul>
+<h2 id="2-Note"><a href="#2-Note" class="headerlink" title="2 Note"></a>2 Note</h2><ul>
+<li>Most meaningful thing is telling others what you’ve learned is really a pleasant thing. And if he / she understand, you feel more lucky. So keep learning and grow up and make more friends.</li>
+<li><strong>Slack</strong>: Rally your coworkers with messaging, calls, files and your favorite apps in one place: <strong>Slack</strong>. Share your work in searchable converstations and automate your team’s routine tasks to make everyone’s work more productive.</li>
+<li><strong>FilePond</strong> is really an amazing, flexible and fun javascript file upload plugin.</li>
+<li>button has an attribute named <code>type</code>. It has three values. <code>button</code> means simple button without auto-submit when you click. <code>submit</code> means submit button which will submit your form when you click it. <code>reset</code> means reset button which will reset your form data when you click it.</li>
+<li>じ - ji, ず　- zu, づ　- du, ち　- chi/ti, ぢ　- di</li>
+<li>call function when click item<ul>
+<li>document.getElementById(id).onclick = function() { }</li>
+<li>document.getElementById(id).addEventListener(type, fn, false)</li>
+</ul>
+</li>
+<li>传统方式： element.onclick = function(e) { … }</li>
+<li>传统方式绑定的优点： 非常简单和稳定，可以确保它在你使用的不同浏览器中运作一致；处理事件时，this关键字引用的是当前元素，这很有帮助</li>
+<li>传统绑定的缺点： 传统方法只会在事件冒泡中运行，而非捕获和冒泡；一个元素一次只能绑定一个事件处理函数。新绑定的事件处理函数会覆盖旧的事件处理函数；事件对象参数e仅非IE浏览器可用</li>
+<li>W3C方式： element.addEventListener(‘click’, function(e) { … }, false)</li>
+<li>W3C绑定的优点： 该方法同时支持事件处理的捕获和冒泡阶段。事件阶段取决于addEventListener最后的参数设置,false(冒泡)或true(捕获)</li>
+<li>W3C绑定的缺点:IE不支持，你必须使用IE的attachEvent函数替代</li>
+<li>IE方式：element.attachEvent(‘onclick’, function() { .. })</li>
+<li>IE方式的优点：可以为同一个元素绑定你所希望的多个事件，同时并不会覆盖先前绑定的事件。</li>
+<li>IE方式的确定： IE仅支持事件捕获的冒泡阶段；事件监听函数内的this关键字指向了window对象，而不是当前元素（IE的一个巨大缺点）；事件对象仅存在于window.event参数中；事件必须以ontype的形式命名，比如，onclick而非click;仅IE可用。你必须在非IE浏览器中使用W3C的addEventListener</li>
+<li>Dean Edwards的方案（addEvent/removeEvent库）</li>
+<li>addEvent的优点：可以在所有的浏览器中工作，就算是更古老的无任何支持的浏览器；this关键字可以在所有的绑定函数中使用，指向的是当前元素；中喝了所有防止浏览器默认行为和组织事件冒泡的各种浏览器特定函数；不管浏览器类型，事件对象总是作为第一个对象传入。</li>
+<li>addEvent的缺点:仅工作在冒泡阶段（因为它深入使的事件绑定的传统方式）<h2 id="2-Copy"><a href="#2-Copy" class="headerlink" title="2 Copy"></a>2 Copy</h2></li>
+<li><p>PLANET-ラムジ</p>
+</li>
+<li><p>どうやって　こうやって</p>
+</li>
+<li>また　ほら　君と話そうか？</li>
+<li>あれだって　これだって</li>
+<li>今すぐきづいてくれ</li>
+<li>僕は君のプラネット回り続けて</li>
+<li>いつも君のそばで</li>
+<li>黒子（ほくろ）数えてたけれど</li>
+<li></li>
+<li>サヨナラなんでないよ</li>
+<li>今日から道を外れんだ</li>
+<li>最後まで見送ってよ</li>
+<li>永遠に離れてくんだ</li>
+<li><p>ラララ</p>
+</li>
+<li><p>どうなって　こうなって</p>
+</li>
+<li>結局ひとり佇んで</li>
+<li>失って　勘づいて</li>
+<li>今さら　戻れやしない</li>
+<li>君のいない場所で</li>
+<li>途方に暮れて</li>
+<li>もう一度引力を</li>
+<li><p>感じたかったっんだけれど</p>
+</li>
+<li><p>神様なんていないよ</p>
+</li>
+<li>いつまで待っても巡回中（じゅんかいちゅう）</li>
+<li>選ばれない悲しみを</li>
+<li><p>何度でも噛みしめるんだ</p>
+</li>
+<li><p>君は僕の太陽</p>
+</li>
+<li>すべてをもやしたけれど</li>
+<li>サヨナラなんでないよ</li>
+<li>今日から道を外れんだ</li>
+<li>最後まで見送ってよ</li>
+<li>永遠に離れてくんだ</li>
+<li>ラララ</li>
+<li>ラララ</li>
+</ul>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/03/01/2018-03-01/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1238,441 +1735,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/22/2018-02-22/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ginhton">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="悟">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2018/02/22/2018-02-22/" itemprop="url">
-                  2018-02-22
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-22T10:38:00+08:00">
-                2018-02-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="2-Thank"><a href="#2-Thank" class="headerlink" title="2 Thank"></a>2 Thank</h2><ul>
-<li>谢谢我的徒弟，和我玩了很久的游戏。挺开心的。</li>
-</ul>
-<h2 id="2-Note"><a href="#2-Note" class="headerlink" title="2 Note"></a>2 Note</h2><ul>
-<li>古希腊六大美德 - 对应的力量与角色<ul>
-<li>sofia （古希腊语中的智慧、哲学之意）；我为我们的使命带来智慧、创造力和聪颖。我是寻求知识的人。</li>
-<li>Thumos （血气）：我为我们的使命带来勇气、活力和决心。我是探险者。</li>
-<li>Chariton （仁德）：我为我们的使命带来感情、人性和吸引力。我是联络人。</li>
-<li>Dikaiosune （正义）：我为我们的使命带来引导、方向和焦点。我是领航员。</li>
-<li>Sophrosune （节制）：我为我们的使命带来平衡、自控和开放态度。我是指导者。</li>
-<li>Mythopoeia （乐观）：我为我们的使命带来乐观精神、远见和艺术美感。我是发现真理的人。</li>
-</ul>
-</li>
-<li>今天最有意义的事情，应该是有人和我一起玩游戏。虽然没什么价值。走出自我，可以去找老朋友，也可以去结识新的朋友。但是，休息一下就要好好学习知识，争取把老师交代的项目给做出一点成果。加油！</li>
-<li>每天写一点就是一件幸福小事。能坚持的话，就多坚持一下。加油！</li>
-</ul>
-<h2 id="2-Copy"><a href="#2-Copy" class="headerlink" title="2 Copy"></a>2 Copy</h2><ul>
-<li>一起玩复杂的游戏、帮助别人学习游戏规则，是人之为人的本质，他称为“共享意向”。</li>
-<li>today’s code copying</li>
-</ul>
-<figure class="highlight go"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> root</div><div class="line"></div><div class="line"><span class="keyword">import</span> (</div><div class="line"><span class="string">"github.com/dnote-io/cli/core"</span></div><div class="line"><span class="string">"github.com/dnote-io/cli/infra"</span></div><div class="line"><span class="string">"github.com/dnote-io/cli/migrate"</span></div><div class="line"><span class="string">"github.com/dnote-io/cli/upgrade"</span></div><div class="line"><span class="string">"github.com/pkg/errors"</span></div><div class="line"><span class="string">"github.com/spf13/cobra"</span></div><div class="line">)</div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">var</span> root = &amp;cobra.Command&#123;</div><div class="line">Use: <span class="string">"dnote"</span>,</div><div class="line">Short: <span class="string">"Dnote - Instantly capture what you learn while coding"</span>,</div><div class="line">SilenceErrors: <span class="literal">true</span>,</div><div class="line">SilenceUsage: <span class="literal">true</span>,</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// Register adds a new command</span></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">Register</span><span class="params">(cmd *cobra.Command)</span></span> &#123;</div><div class="line">root.AddCommand(cmd)</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// Execute runs the mand commmand</span></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">Execute</span><span class="params">()</span> <span class="title">error</span></span> &#123;</div><div class="line"><span class="keyword">return</span> root.Execute()&#125;</div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">// Prepare initialize necessary files</span></div><div class="line"><span class="function"><span class="keyword">func</span> <span class="title">Prepare</span><span class="params">(ctx infra.DnoteCtx)</span> <span class="title">error</span></span> &#123;</div><div class="line">err := core.MigrateToDnoteDir(ctx)</div><div class="line"><span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</div><div class="line"><span class="keyword">return</span> errors.Warp(err, <span class="string">"failed to initialize dnote dir"</span>)</div><div class="line"></div><div class="line">fresh, err := core.IsFreshInstall(ctx)</div><div class="line"><span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</div><div class="line"><span class="keyword">return</span> errors.Wrap(err, <span class="string">"Failed to check if fresh install"</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line">error = core.InitDnoteDir(ctx)</div><div class="line"><span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</div><div class="line"><span class="keyword">return</span> errors.Warp(err, <span class="string">"failed to create dnote dir"</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line">err = core.InitConfigFile(ctx)</div><div class="line"><span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</div><div class="line"><span class="keyword">return</span> errors.Wrap(err, <span class="string">"Failed to generate config file"</span>)&#125;</div><div class="line"></div><div class="line">err = core.InitDnoteFile(ctx)</div><div class="line"><span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</div><div class="line"><span class="keyword">return</span> errros.Wrap(err, <span class="string">"Failed to create dnote file"</span>)</div><div class="line">&#125;</div><div class="line">err = core.InitTimestampFile(ctx)</div><div class="line"><span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</div><div class="line">retunr errors.Wrap(err, <span class="string">"Failed to create dnote upgrade file"</span>)&#125;</div><div class="line">err = core.InitActionFile(ctx)</div><div class="line"><span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</div><div class="line"><span class="keyword">return</span> errors.Wrap(err, <span class="string">"Faield to create action file"</span>)&#125;</div><div class="line">err = migrate.InitSchemaFile(ctx, fresh)</div><div class="line"><span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</div><div class="line"><span class="keyword">return</span> errors.Wrap(err, <span class="string">"Failed to create migrateion file"</span>)&#125;</div><div class="line"></div><div class="line">err = migrate.Migrate(ctx)</div><div class="line"><span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</div><div class="line"><span class="keyword">return</span> errors.Wrap(err, <span class="string">"Failed to perform migration"</span>)&#125;</div><div class="line"></div><div class="line">err = uupgrade.AutoUpgrade(ctx)</div><div class="line"><span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</div><div class="line"><span class="keyword">return</span> errors.Wrap(err, <span class="string">"failed to auto upgrade"</span>)&#125;</div><div class="line"><span class="keyword">return</span> <span class="literal">nil</span></div></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/21/2018-02-21/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ginhton">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="悟">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2018/02/21/2018-02-21/" itemprop="url">
-                  2018-02-21
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-21T10:26:00+08:00">
-                2018-02-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="2-Thank"><a href="#2-Thank" class="headerlink" title="2 Thank"></a>2 Thank</h2><ul>
-<li>Thank for the web advice</li>
-<li>Thank my father</li>
-</ul>
-<h2 id="2-Note"><a href="#2-Note" class="headerlink" title="2 Note"></a>2 Note</h2><ul>
-<li>练习，练习，练习。</li>
-<li>多与人沟通，变得更加温和。</li>
-<li>控制自己情绪的目的，是为了给别人想要的回应。</li>
-<li><code>cobra</code> is a commander for modern Go CLI interactions. Cobra is both a library for creating powerful modern CLI applications as well as a program to generate applications and command files.</li>
-<li><code>git clone --depth=2</code> depth 用于指定克隆深度，为2表示只克隆最近一次commit</li>
-<li><code>go build -o name</code> 在同目录下生成指定名称的可执行文件. <code>go install</code> 会在GOPATH的bin目录下生成目录同名可执行文件。</li>
-<li>今天比较开心的事情是，示例的代码编辑后，可以在travis ci 上运行通过了。哇咔咔。</li>
-</ul>
-<h2 id="2-story"><a href="#2-story" class="headerlink" title="2 story"></a>2 story</h2><ul>
-<li>爷爷家以前有一只大花猫，那时候我记得养的很肥很大。近几年却看不到了。</li>
-<li>爷爷，那只猫怎么不见了？死掉了吗？</li>
-<li>扔掉了</li>
-<li>怎么扔掉了呢？那只猫那么好。</li>
-<li>隔壁的老太太觉得烦，猫把人家的被子都抓坏了。于是，就用麻袋裹住它，运到野外扔掉了。</li>
-<li>…</li>
-<li>猫这种生物，如果不蒙着眼，它会记着路，自己跑回来的。</li>
-</ul>
-<h2 id="2-Copy"><a href="#2-Copy" class="headerlink" title="2 Copy"></a>2 Copy</h2><ul>
-<li>当代人在沟通上最大的问题就是过于“无情”了，无论是家庭还是社会，我们每一个人都在被这种无情所伤害。影响一个人最好的方式不是语言本身，而是语言背后所表露的情感。</li>
-<li>如果是一种情感伤害了别人，解释再多都是无用的，必须要用另外一种情感去修复这种关系。</li>
-<li>你必须清醒让自己和他人都清醒地意识到，你特定时候的某个感觉，是针对这个情景下的一个片面情绪，并不针对整段关系。</li>
-<li>其实说冷话的人多半是热心肠的人，但是如果我们曾经因为一个人的一句话冷到四体百骸，那会丧失感受别人热心肠的能力。</li>
-<li>在任何一段关系里，冷话都是伤人的。当一个人不会因为你袒露出丝毫的情绪时，你们距离已经无法靠近了。虽然情绪坦露太多略显矫情，但袒露太少却是陌生的信号。</li>
-<li>“就事论事”不完全是一种有效地沟通方式，因为只有事情背后的情绪完整了，人对事情的认识才能完整。</li>
-<li>每一句“没关系”背后都隐藏着千万句“你麻痹”。也不要总认为别人是错的，在人性这件事上，凡人间没有谁能高尚多少。成熟并不是个逐渐变得沉默的过程，你不需要闭嘴，而是需要过滤嘴。</li>
-<li>对于同样一件糟心事，同样的一个人，我们的处理方式从不成熟到成熟，经历一下几个层面：<ul>
-<li>气盛 - 爆发 - 后悔</li>
-<li>气盛 - 憋着 - 还好没发作</li>
-<li>气盛 - 淡然 - 闲看庭外花开花落</li>
-</ul>
-</li>
-<li>我们每一个人都是渴望被认可的，没有任何一个人喜欢被否定。学会认可别人。</li>
-<li>女生有时候撒娇看似无理取闹，在意的是你的态度，而不是真的在索取什么。</li>
-<li>保持目的的行为的统一</li>
-<li>情商高不是喜怒不形于色，而是通过对他人情绪的感知，对自己情绪的控制，给别人想要的回应，学会运用情绪，通过恰到好处的行为，达到自己的目的，所谓价值最大化。</li>
-<li>越是亲近的人越要用心对待，一句随意的话会伤害她。</li>
-<li>结果永远是导向，做不到就是不行。</li>
-<li>人家喜欢，管你鸟事。不要用自己的标准去衡量别人。</li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/02/20/2018-02-20/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="ginhton">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="悟">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2018/02/20/2018-02-20/" itemprop="url">
-                  2018-02-20
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-02-20T09:27:00+08:00">
-                2018-02-20
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="2-Thank"><a href="#2-Thank" class="headerlink" title="2 Thank"></a>2 Thank</h2><ul>
-<li>Thank life</li>
-</ul>
-<h2 id="2-Note"><a href="#2-Note" class="headerlink" title="2 Note"></a>2 Note</h2><ul>
-<li>add build status in readme<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[![Build Status](https://travis-ci.org/ginhton/aha.svg?branch=master)](https://travis-ci.org/ginhton/aha)</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<h2 id="2-Copy"><a href="#2-Copy" class="headerlink" title="2 Copy"></a>2 Copy</h2><ul>
-<li>nothing</li>
-</ul>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1722,7 +1784,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">134</span>
+                <span class="site-state-item-count">137</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
