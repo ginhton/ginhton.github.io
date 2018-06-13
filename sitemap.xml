@@ -3,17 +3,17 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://ginthon.github.io/categories/</loc>
+    <loc>https://ginhton.github.io/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://ginthon.github.io/tags/</loc>
+    <loc>https://ginhton.github.io/tags/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://ginthon.github.io/</loc>
+    <loc>https://ginhton.github.io/</loc>
     <priority>0</priority>
   </url>
   
