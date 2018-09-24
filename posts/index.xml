@@ -6,10 +6,46 @@
     <description>Recent content in Posts on 本来无一物</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 14 Jun 2018 21:27:26 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 24 Sep 2018 21:17:54 +0800</lastBuildDate>
     
 	<atom:link href="https://ginhton.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>6</title>
+      <link>https://ginhton.github.io/posts/6/</link>
+      <pubDate>Mon, 24 Sep 2018 21:17:54 +0800</pubDate>
+      
+      <guid>https://ginhton.github.io/posts/6/</guid>
+      <description>举目见月，不见长安 something  Once the CPU has been switched into 32-bit protected mode, the process by which it translates logical addresses to physical addresses is completely different: rather than multiply the value of a segment register by 16 and then add to it the offset, a segment register becomes an index to a particular segment descriptor (SD) in the GDT. A segment descriptor is an 8-byte structure that defines the following properties of a protected-mode segment:  Base address (32 bits), which defines where the segment begins in physical memory Segment Limit (20 bits), which defines the size of the segment Various flags  When the computer boots, the BIOS doesn&amp;rsquo;t know how to load the OS, so it delegates that task to the boot sector.</description>
+    </item>
+    
+    <item>
+      <title>5</title>
+      <link>https://ginhton.github.io/posts/5/</link>
+      <pubDate>Fri, 21 Sep 2018 15:05:25 +0800</pubDate>
+      
+      <guid>https://ginhton.github.io/posts/5/</guid>
+      <description> git term  checkout - for branch rebase ? reset HEAD  awk  awk -F &amp;lsquo; &amp;rsquo; &amp;lsquo;{sum+=$2*@4} END {print sum}&amp;rsquo; file calculate sum of tow clumns&amp;rsquo; mul.  </description>
+    </item>
+    
+    <item>
+      <title>4</title>
+      <link>https://ginhton.github.io/posts/4/</link>
+      <pubDate>Wed, 19 Sep 2018 16:01:58 +0800</pubDate>
+      
+      <guid>https://ginhton.github.io/posts/4/</guid>
+      <description> 平时多烧香，临时抱佛脚 commands of spacemacs  SPC + ! : run shell commands SPC f y : show and copy curren file path SPC l s : save layout SPC l L : load layout SPC s s : search currence of a word in current buffer SPC s S : similar as the above SPC v : select outer region SPC x a : align code  </description>
+    </item>
+    
+    <item>
+      <title>3</title>
+      <link>https://ginhton.github.io/posts/3/</link>
+      <pubDate>Tue, 18 Sep 2018 20:43:55 +0800</pubDate>
+      
+      <guid>https://ginhton.github.io/posts/3/</guid>
+      <description> 本欲度众生 反被众生度 </description>
+    </item>
     
     <item>
       <title>1</title>
