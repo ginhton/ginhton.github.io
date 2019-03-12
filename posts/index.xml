@@ -6,10 +6,19 @@
     <description>Recent content in Posts on 本来无一物</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 24 Sep 2018 21:17:54 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 12 Mar 2019 19:52:14 +0800</lastBuildDate>
     
 	<atom:link href="https://ginhton.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Tests</title>
+      <link>https://ginhton.github.io/posts/tests/</link>
+      <pubDate>Tue, 12 Mar 2019 19:52:14 +0800</pubDate>
+      
+      <guid>https://ginhton.github.io/posts/tests/</guid>
+      <description> git submodule  git submodule add cloning a project with submodules  git clone SOME-PROJECT git submodule init git submodule update  or use this:  git clone &amp;ndash;recurse-submodules SOME-PROJECT   </description>
+    </item>
     
     <item>
       <title>6</title>
