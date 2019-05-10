@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Ginhton">
+    <meta name="description" content="Ginhton&#39;s personal website">
+    <meta name="keywords" content="blog,developer,personal">
+
+    <base href="https://ginhton.github.io/">
+    <title>
+   · 本来无一物
+</title>
+
+    <link rel="canonical" href="https://ginhton.github.io/posts/14/">
+
+    <link  rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700">
+    <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+    <link rel="stylesheet" href="https://ginhton.github.io/css/style.min.css">
+
+    
+
+    <link rel="icon" type="image/png" href="https://ginhton.github.io/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://ginhton.github.io/images/favicon-16x16.png" sizes="16x16">
+
+    
+
+    <meta name="generator" content="Hugo 0.40.1" />
+  </head>
+
+  <body>
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://ginhton.github.io/">
+      本来无一物
+    </a>
+    
+    <ul class="navigation-list float-right">
+      
+      <li class="navigation-item">
+        <a class="navigation-link" href="/posts/">Blog</a>
+      </li>
+      
+      <li class="navigation-item">
+        <a class="navigation-link" href="/about/">About</a>
+      </li>
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+  <article>
+    <header>
+      <h1 class="title"></h1>
+      <h2 class="date">October 10, 2018</h2>
+
+      
+    </header>
+
+    
+
+<h2 id="what-is-ld-ttext-option-doing">What is &ldquo;ld -Ttext&rdquo; option doing?</h2>
+
+<ul>
+<li>original link: <a href="https://stackoverflow.com/questions/34622557/what-is-ld-ttext-option-doing">https://stackoverflow.com/questions/34622557/what-is-ld-ttext-option-doing</a></li>
+
+<li><p>The <code>-Ttext</code> option puts the <strong>.text</strong> section of your program by the given address.  For example if you are compile this assembly code:
+```nasm
+section .text
+global _start
+_start:
+mov al, &lsquo;!&rsquo;
+jmp l
+l:  mov ah, 0x0e
+mov bh, 0x00
+mov bl, 0x07</p>
+
+<p>int 0x10
+jmp $</p></li>
+</ul>
+
+<p>times 510 - ($-$$) db 0</p>
+
+<p>dw 0x55aa</p>
+
+<pre><code>
+with:
+```bash
+nasm -f elf64 -o test.o test.S
+ld -o test test.o
+</code></pre>
+
+<ul>
+<li>And will look on it with the <code>objdump</code>, you will see that it was linked by default address, something around <code>0x0000000000400000</code> for the <code>x86_64</code>:
+```bash
+~$ objdump -D test</li>
+</ul>
+
+<p>test:     file format elf64-x86-64</p>
+
+<p>Disassembly of section .text:</p>
+
+<p>0000000000400080 &lt;_start&gt;:
+        400080: b0 21        mov $0x21,%al
+        400082: eb 00        jmp 400084 <l>
+0000000000400084 <l>:
+        400084: b4 0e        mov $0xe,%ah
+        &hellip;
+        &hellip;
+        &hellip;</p>
+
+<pre><code>
+* And all addresses in the program (at least in the `.text` section) will be relative to this address. If you will add the `-Ttext 1000` option, you will see:
+
+```bash
+~$ objdump -D test
+
+test:     file format elf64-x86-64
+
+Disassembly of section .text:
+
+0000000000001000 &lt;_start&gt;:
+        1000:   b0 21         mov $0x21,%al
+        1002:   eb 00         jmp 1004 &lt;l&gt;
+        
+00000000000001004 &lt;l&gt;:
+        1004:   b4 0e         mov $0xe,%ah
+</code></pre>
+
+<ul>
+<li><p>That your program will be linked to start at 0x1000 address and all addresses (including jmp and etc.) will be relative to the 0x1000 to.</p></li>
+
+<li><p>This is important for two things.  In short words, when an operating system kernel loads your program, it loads your executable which is in elf format or in other binary format and reads where the <code>.text</code> sections starts.  In our case, you can link your <code>kernel.bin</code> as you want, because there are no loaders as an operationg system kernel and your are master of all memory space.</p></li>
+
+<li><p>So if you will link your <code>kernel.bin</code> to start at <code>0x1000</code>, you will know where the code starts to work (of course if it will actually loaded at this place in memory) and if you know the base address of your code, you can get all addresses inside it, something like <code>my_label_inside_program - _start</code>.</p></li>
+</ul>
+
+  </article>
+
+  <br/>
+
+  
+  
+</section>
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+     © 2019    ·  Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>. 
+  </section>
+</footer>
+
+    </main>
+
+    
+
+  </body>
+
+</html>

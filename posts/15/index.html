@@ -11,10 +11,10 @@
 
     <base href="https://ginhton.github.io/">
     <title>
-  Posts · 本来无一物
+  15 · 本来无一物
 </title>
 
-    <link rel="canonical" href="https://ginhton.github.io/posts/">
+    <link rel="canonical" href="https://ginhton.github.io/posts/15/">
 
     <link  rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700">
     <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
@@ -25,9 +25,6 @@
     <link rel="icon" type="image/png" href="https://ginhton.github.io/images/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="https://ginhton.github.io/images/favicon-16x16.png" sizes="16x16">
 
-    
-      <link href="https://ginhton.github.io/posts/index.xml" rel="alternate" type="application/rss+xml" title="本来无一物" />
-      <link href="https://ginhton.github.io/posts/index.xml" rel="feed" type="application/rss+xml" title="本来无一物" />
     
 
     <meta name="generator" content="Hugo 0.40.1" />
@@ -59,24 +56,30 @@
 
       <div class="content">
         
-  <section class="container list">
-  <h1 class="title">Posts</h1>
-  <ul>
+  <section class="container post">
+  <article>
+    <header>
+      <h1 class="title">15</h1>
+      <h2 class="date">November 2, 2018</h2>
+
+      
+    </header>
+
     
-    <li>
-      <span>May 10, 2019</span><a href="/posts/stuff1/">Stuff1</a>
-    </li>
-    
-  </ul>
+
+<h2 id="how-can-i-backup-a-docker-image">How can I backup a docker image</h2>
+
+<p>Simply use the docker save command. $ docker save myusername/myproject:latest | gzip -c &gt; myproject_img_bak20141103.tgz</p>
+
+<p>You will later be able to restore it with the docker load command. gunzip -c myproject_img_bak20141103.tgz | docker load</p>
+
+  </article>
+
+  <br/>
+
   
-
-
-
-
-
-
+  
 </section>
-
 
       </div>
 

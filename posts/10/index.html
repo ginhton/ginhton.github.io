@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Ginhton">
+    <meta name="description" content="Ginhton&#39;s personal website">
+    <meta name="keywords" content="blog,developer,personal">
+
+    <base href="https://ginhton.github.io/">
+    <title>
+   · 本来无一物
+</title>
+
+    <link rel="canonical" href="https://ginhton.github.io/posts/10/">
+
+    <link  rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700">
+    <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+    <link rel="stylesheet" href="https://ginhton.github.io/css/style.min.css">
+
+    
+
+    <link rel="icon" type="image/png" href="https://ginhton.github.io/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://ginhton.github.io/images/favicon-16x16.png" sizes="16x16">
+
+    
+
+    <meta name="generator" content="Hugo 0.40.1" />
+  </head>
+
+  <body>
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://ginhton.github.io/">
+      本来无一物
+    </a>
+    
+    <ul class="navigation-list float-right">
+      
+      <li class="navigation-item">
+        <a class="navigation-link" href="/posts/">Blog</a>
+      </li>
+      
+      <li class="navigation-item">
+        <a class="navigation-link" href="/about/">About</a>
+      </li>
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+  <article>
+    <header>
+      <h1 class="title"></h1>
+      <h2 class="date">October 8, 2018</h2>
+
+      
+    </header>
+
+    
+
+<h2 id="why-do-i-need-a-cross-compiler">Why do I need a Cross Compiler?</h2>
+
+<ul>
+<li><p>You need to use a cross-compiler unless you are developing on your own operating system.  The compiler must know the correct target platform (CPU, operationg system), otherwise you will run into trouble. You may be able to use the compiler that comes with your system if you pass a number of options to beat it into submission, but this will create alot of completely imaginary problems.</p></li>
+
+<li><p>It is possible ask your compiler what target platform it is currently using by calling the comand: <code>gcc -dumpmachine</code>
+if you are developing on 64-bit Linux, then you will get a response such as &lsquo;x86_64-unknow-linux-gnu&rsquo;. This means that the compiler thinks it is creating code for Linux. If you use this Gcc to build your kernel, it weill use your system libraries, headers, the LInux libgcc, and it will make a lot of problematic Linux assumptions. If you use a cross-compiler such as i686-elf-gcc, then you get a response back such as &lsquo;i686-elf&rsquo; that means the compiler knows it is doing something else and you can avoid a lot of problesm easily and properly.</p></li>
+</ul>
+
+<h2 id="the-cache-machine-when-to-store-resources">The cache machine - when to store resources</h2>
+
+<ul>
+<li>ServiceWorker lets you handle requests independently from caching, so we&rsquo;ll look at them separately. First up, caching, when should it be done?</li>
+</ul>
+
+<h3 id="on-install-as-a-dependency">On install - as a dependency</h3>
+
+<ul>
+<li><p>ServiceWorker gives you an install event.  You can use this to get stuff ready, stuff that must be ready before you handle other events.  While this happens any previous version of your ServiceWorker is still running &amp; serving pages, so the things you do here mustn&rsquo;t disrupt that.</p></li>
+
+<li><p>Ideal for: CSS, images, fonts, JS, templates&hellip; basically anything you&rsquo;d consider static to that &ldquo;version&rdquo; of your site.</p></li>
+
+<li><p>These are things that would make your site entirely none-functional if they fialed to fetch, things an equivalent native-app would make part of the initial download.</p>
+
+<pre><code class="language-javascript">self.addEventListener('install', function(event) {
+event.waitUntil(
+caches.open('mysite-static-v3').then(function(cache) {
+return cache.addAll([
+'/css/whatever-v3.css',
+'/css/imgs/sprites-v6.png',
+'/css/fonts/whatever-v8.woff',
+'/js/all-min-v4.js'
+//etc
+]);
+}));
+});
+</code></pre></li>
+
+<li><p>event.waitUntil takes a promise to define the lnegth &amp; sucdess of the install. If the promise rejects, the installations is considered a failure and this Service Worker will be abandoned (if an older version is running, it&rsquo;ll be lfet intact).  caches.open and cache.addAll return promises.  If any of the resources fail to fetch, the cache.addAll call rejects.</p></li>
+</ul>
+
+<h3 id="on-install-not-as-a-dependency">On install - not as a dependency</h3>
+
+<ul>
+<li><p>Similar to above, but won&rsquo;t delay install completing and won&rsquo;t cause installation to fail if caching fails.</p></li>
+
+<li><p>Ideal for: Bigger resources that aren&rsquo;t needed straight away, such as assets for later levels of a game.</p></li>
+</ul>
+
+<pre><code class="language-javascript">self.addEventListener('install', function(event) {
+event.waitUntil(
+caches.open('mygame-core-v1').then(function(cache) {
+cache.addAll(
+// levels 11-20
+);
+return cache.addAll(
+// core assets &amp; levels 1-10
+);
+})
+);
+});
+</code></pre>
+
+<ul>
+<li><p>We&rsquo;re not passing the cache.addAll promise ofr levels 11-20 back to event.waitUntil, so even if it fails, the game will still be available offline.  Of course, you&rsquo;ll have to cater for the possible absence  of those levels &amp; reattempt caching them if they&rsquo;re missing.</p></li>
+
+<li><p>The ServiceWorker may be killed while levels 11-20 download since it&rsquo;s finished handling events, meaing they won&rsquo;t be cached.  In future we plan to add a background downloading API to handle cases like this, and larget downloads such as movies.</p>
+
+<h3 id="on-activate">On activate</h3></li>
+
+<li><p>Once a new ServiceWorker has installed &amp; a previous version isn&rsquo;t being used, the new one activates, and you get an activate event.  Because the old version is out of the way, it&rsquo;s a good time to handle schema migrations in IndexedDB and also delte unused caches.</p>
+
+<pre><code class="language-javascript">self.addEventListener('activate', function(event) {
+event.waitUntil(
+caches.keys().then(function(cacheNames) {
+return Promise.all(
+cacheNames.filter(function(cacheName) {
+// Return true if you want to remove this cache,
+// but remember that caches are shared across the whole origin
+}).map(function(cacheName) {
+return caches.delete(cacheName);
+}))})
+)})
+</code></pre></li>
+
+<li><p>During activation, other events such as fetch are put into a queue, so a long activation could potentially block page loads. Keep your activation as lean as possible, only use it for things you couldn&rsquo;t do while the old version was active.</p></li>
+</ul>
+
+<h3 id="on-user-interaction">On user interaction</h3>
+
+<ul>
+<li>Ideal for: If the whole site can&rsquo;t be taken offline, you may allow the user to select the content they want available offline. E.g. a video on somthing like YouTube, an article on Wikipedia, a particular gallery on Flickr.</li>
+</ul>
+
+<p>Give the user a &ldquo;read later&rdquo; or &ldquo;Save for Offline&rdquo; button. When it&rsquo;s clcked, fetch what you need from the network &amp; pop it in the cache.</p>
+
+<pre><code class="language-javascript">document.querySelector('.cache-article').addEventListener('click', function(event) {
+
+event.preventDefault();
+
+var id = this.dataset.articleId;
+caches.open('mysite-article-' + id).then(function(cache) {
+fetch('/get-article-urls?id=' + id).then(function(response) {
+// /get-article-urls returns a JSON-encoded array of
+// resource URLs that a given article depends on
+return response.json();}).then(function(urls) {
+cache.addAll(urls);})})
+})
+</code></pre>
+
+<ul>
+<li>The caches API is availale from pages as well as service workers, meaning you don&rsquo;t need to involve the service worker to add things to the cache.</li>
+</ul>
+
+<h3 id="on-network-response">On network response</h3>
+
+<ul>
+<li><p>Ideal for: Frequently updating resources such as a user&rsquo;s inbox, or article contents. Also useful for non-essential content such as avatars, but care is needed.</p></li>
+
+<li><p>If a requset doesn&rsquo;t match anything in the cache, get it from the network, send it to the page &amp; add it to the cache at the same time.</p></li>
+
+<li><p>If you do this for a range of URLs, such as avatars, you&rsquo;ll need to be careful you don&rsquo;t bloat the storage of your origin &ndash; if the user needs to reclainm disk space you don&rsquo;t want to be the prime candidate.  Make sure you get rid of items in the cache you don&rsquo;t need any more.</p></li>
+</ul>
+
+<pre><code class="language-javascript">self.addEventListener('fetch', function(event) {
+event.respondWith(
+caches.open('mysite-dynamic').then(function(cache) {
+return cache.match(event.request).then(function(response) {
+return response || fetch(event.request).then(function(response) {
+cache.push(event.request, response.clone());
+return response;
+})})}))})
+</code></pre>
+
+<ul>
+<li>To allow for efficient memory usage, you can only read a response/request&rsquo;s body once.  In the code above, .clone() is used to create additional copies that can be read reparately.</li>
+</ul>
+
+  </article>
+
+  <br/>
+
+  
+  
+</section>
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+     © 2019    ·  Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>. 
+  </section>
+</footer>
+
+    </main>
+
+    
+
+  </body>
+
+</html>

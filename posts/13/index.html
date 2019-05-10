@@ -11,10 +11,10 @@
 
     <base href="https://ginhton.github.io/">
     <title>
-  Posts · 本来无一物
+   · 本来无一物
 </title>
 
-    <link rel="canonical" href="https://ginhton.github.io/posts/">
+    <link rel="canonical" href="https://ginhton.github.io/posts/13/">
 
     <link  rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700">
     <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
@@ -25,9 +25,6 @@
     <link rel="icon" type="image/png" href="https://ginhton.github.io/images/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="https://ginhton.github.io/images/favicon-16x16.png" sizes="16x16">
 
-    
-      <link href="https://ginhton.github.io/posts/index.xml" rel="alternate" type="application/rss+xml" title="本来无一物" />
-      <link href="https://ginhton.github.io/posts/index.xml" rel="feed" type="application/rss+xml" title="本来无一物" />
     
 
     <meta name="generator" content="Hugo 0.40.1" />
@@ -59,24 +56,60 @@
 
       <div class="content">
         
-  <section class="container list">
-  <h1 class="title">Posts</h1>
-  <ul>
+  <section class="container post">
+  <article>
+    <header>
+      <h1 class="title"></h1>
+      <h2 class="date">October 9, 2018</h2>
+
+      
+    </header>
+
     
-    <li>
-      <span>May 10, 2019</span><a href="/posts/stuff1/">Stuff1</a>
-    </li>
-    
-  </ul>
+
+<h2 id="makefile">Makefile</h2>
+
+<pre><code class="language-makefile"># $@ = target file
+# $&lt; = first dependency
+# $^ = all dependencies
+
+# first rule is the one executed when no parameters are fed to the Makefile
+all: run
+
+# Notice how dependencies are built as needed
+kernel.bin: kernel_entry.o kernel.o
+  i386-elf-ld -o $@ -Ttext 0x1000 $^ --oformat binary
+
+kernel_entry.o: kernel_entry.asm
+  nasm $&lt; -f elf -o $@
   
+kernel.o: kernel.c
+  i386-elf-gcc -ffreestanding -c $&lt; -o $@
+  
+# Rule to disassemble the kernel - may be useful to debug
+kernel.dis: kernel.bin
+  ndisasm -b 32 $&lt; &gt; $ $@
 
+boot-sect.bin: bootsect.asm
+  nasm $&lt; -f bin -o $@
+  
+os-image.bin: bootsect.bin kernel.bin
+  cat $^ &gt; $@
+  
+run: os-image.bin
+  qemu-system-i386 -fda $&lt;
+  
+clean: 
+  rm *.bin *.o *.dis
+</code></pre>
 
+  </article>
 
+  <br/>
 
-
-
+  
+  
 </section>
-
 
       </div>
 

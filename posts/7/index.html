@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Ginhton">
+    <meta name="description" content="Ginhton&#39;s personal website">
+    <meta name="keywords" content="blog,developer,personal">
+
+    <base href="https://ginhton.github.io/">
+    <title>
+   · 本来无一物
+</title>
+
+    <link rel="canonical" href="https://ginhton.github.io/posts/7/">
+
+    <link  rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Mono:400,700">
+    <link rel="stylesheet" href="//cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+    <link rel="stylesheet" href="https://ginhton.github.io/css/style.min.css">
+
+    
+
+    <link rel="icon" type="image/png" href="https://ginhton.github.io/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://ginhton.github.io/images/favicon-16x16.png" sizes="16x16">
+
+    
+
+    <meta name="generator" content="Hugo 0.40.1" />
+  </head>
+
+  <body>
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://ginhton.github.io/">
+      本来无一物
+    </a>
+    
+    <ul class="navigation-list float-right">
+      
+      <li class="navigation-item">
+        <a class="navigation-link" href="/posts/">Blog</a>
+      </li>
+      
+      <li class="navigation-item">
+        <a class="navigation-link" href="/about/">About</a>
+      </li>
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+  <article>
+    <header>
+      <h1 class="title"></h1>
+      <h2 class="date">October 6, 2018</h2>
+
+      
+    </header>
+
+    
+
+<h2 id="better-to-be-hurt-by-the-truth-than-comforted-with-a-lie-khaled-hosseini">Better to be hurt by the truth than comforted with a lie. Khaled Hosseini</h2>
+
+<h2 id="what-is-activitypub-and-how-will-it-change-the-internet">What is ActivityPub and how will it change the internet?</h2>
+
+<h3 id="original-link">original link</h3>
+
+<ul>
+<li><a href="https://jeremydormitzer.com/blog/what-is-activitypub-and-how-will-it-change-the-internet/">https://jeremydormitzer.com/blog/what-is-activitypub-and-how-will-it-change-the-internet/</a></li>
+</ul>
+
+<h3 id="a-new-kind-of-social-network">A new kind of social network</h3>
+
+<ul>
+<li><p>There&rsquo;s a new socail network in town. It&rsquo;s called Mastodon. You might have even heard of it. On the surface, Mastodon feels a lot like Twitter: you post &ldquo;toots&rdquo; up to 500 characters; you follow other users who say interesting things; you can favorite a toot or re-post it to your own followers.  But Mastodon is different from Twitter in some fundamental ways.  It offers many more ways for uses to controls posts they ses.  It fosters awareness of the effect you posts have on ohters throught a content warning system and encourages accessibility with captioned images.  At its core, thought, there&rsquo;s a more fundamental difference from exsting socail networks:  Mastodon isn&rsquo;t controlled by a single corporaition.  Anyone can operate a Mastodon server, and users on any server can interact with users on any other Mastodon server.</p></li>
+
+<li><p>This decentralized model is called federation.  Email is a good analogy here: I can have a Gmail account and you can have an Outlook account, but we can still send mail to each other.  In the same way, I can have an account on mastodon.technology, and you can have an account on mastodon.social, but we can still follow eah other, like and re-post each other&rsquo;s toots, and @mention each other.  Just like Gmail servers know how to talk to Outlook servers, Mastodon servers know how to talk to other Mastodon servers (if you hear people talking about a Mastodon &ldquo;instance&rdquo;, they mean server).  And just like Gmail and Outlook are controlled by different corporations, Mastodon servers are owned and operated by many different people and organizations.  If you wanted, you could host your own mastodon instance!</p></li>
+
+<li><p>Why does this matter?  It means that Mastodon uses have choice about where they hang out online.  If Twitter decides that your posts shouldn&rsquo;t be on their platform, they can shut down your account and there&rsquo;s nothing you can do about it (or conversely, if they decide your f-ed up content is totally fine, theres&rsquo;s nothing anyone else can do about it).  On the other hand, if you disagree with the administrators of your Mastodon instance, you have the choice to move yoyur account to anohter instance (switching providers, as it were) or to host your own instance if you&rsquo;re willing to dedicate the time and effort.</p></li>
+
+<li><p>The federated model also tends to align incentives better than centralized alternatives.  Mastodon instances are usually run and moderated by members of the community that uses that particular Mastodon server &ndash; for example, I&rsquo;m part of a community of tech folks over at mastodon.technology, and our server is administrated and moderated by a member of the community.  He has a vested interest in making mastodon.technology a nice place to hang out since he hangs out there too.  Contrast that with Twitter: Twitter is owned and operated by a massive, venture-backed, for-profit corporation.  Now I&rsquo;m certainly not against companies making money (more on that later), but Twitter only cares about making Twitter a nice place to hang out to the xtent that they profit by it, which has led them to make some suer-unfriendly choices.</p></li>
+
+<li><p>So Mastodon is pretty coll.  But that&rsquo;s not what really gets me excited.  I&rsquo;m excited about Mastodon servers allow users on different instances to interact.  It&rsquo;s a protocol called ActivityPub, and it&rsquo;s going to change the way the internet works.</p></li>
+</ul>
+
+<h3 id="activitypub">ActivityPub</h3>
+
+<ul>
+<li><p>ActivityPub is a social networking protocol.  Think of it as a language that describes aocail networks: the nounts are users and posts, and the verbs are like, follow, hare, create&hellip;  ActivityPub gives applications a shared vocabulary that they can use to communicate with each other.  If a server implements ActivityPub, it can publish posts that any other server that implements ActivityPub knows how to share, like and reply to.  It can slso share, like, or reply to posts form other servers that speak ActivityPub on behalf of its users.</p></li>
+
+<li><p>This is how Mastodon instances let users interact with suers on other instances: because Mastodon instance implements ActivityPub, one instance knows how to interpret a post published form another instance, how to like a post from another instance, how to follow a user from another instace, etc.</p></li>
+
+<li><p>ActivityPub is much bigger than just Mastodon, though.  It&rsquo;s a language that any application can implement.  For example, there&rsquo;s a YouTube clone called PeerTube that also implements ActivityPub.  Because it speaks the same language as Mastodon, a Mastodon user can follow a PeerTube user.  If the PeerTube user posts a new video, it will show up in the Mastodon user&rsquo;s feed.  The Mastodon user can comment on the PeerTube video directly from Mastondon.  Think about that for a second.  Any app that implemetns ActivityPub becomes part of a massive social network, one that conserves user choice and tears down walled gardens.  Imagein if you could log into Facebook and see posts from your friends on Instagram and Twitter, wihtout needing an Instagram or Twitter account.</p></li>
+
+<li><p>So here&rsquo;s how ActivityPub is going to change the internet:</p></li>
+</ul>
+
+<h3 id="no-more-walled-gardens">No more walled gardens</h3>
+
+<ul>
+<li>ActivityPub separates content from platform.  Posts from one platform propagate to other platforms, and users don&rsquo;t need to make separate accounts on every platform that they want to use.  This have an additional benefit: since your ActivityPub identity (your Mastodon accout, your PeerTube account, etc.) is valid across all ActivityPub-compliant applications, it srvers as a much stronger identity signal, preventing malicious actors from impersonating you (e.g. creating a twitter account in your name).  If you can share one accoutn across multiple platforms, no one can pretend to be  you on those platforms &ndash; you are already there!</li>
+</ul>
+
+<h3 id="social-networking-coms-built-in">Social networking coms built-in</h3>
+
+<ul>
+<li>With traditional internet media, you need to rely on external services to share your YouTube video around, you need to post it to Facebook or Twiiter.  But ActivityPub-enabled applicatoins are socail by nature.  A PeerTube video can be shared or liked by default by users on Mastodon.  A plume blogger can build an audience on Mastodon or PeerTube without any aditional effort since Mastodon and PeerTube users can follow Plume blogs natively.  Users on all thers platforms see content from the other apps on the platform of their choice.  And Mastodon, PeerTube, and Plume are just the beginning &ndash; as more platforms begin implementing ActivityPub, the federated network grows exponentially.</li>
+</ul>
+
+<h3 id="network-effects-that-help-users-instead-of-harming-them">Network effects that help users instead of harming them</h3>
+
+<ul>
+<li>&ldquo;Network effects&rdquo; leaves kind of a dirty taste in my outh.  It&rsquo;s usually used as a euphemism for &ldquo;vendor lock-in&rdquo;; the reason that Facebook became such a giant was that everyone needed to b e on Facebook to participate in Facebook&rsquo;s network.  However, ActivityPub flips this equation on its head.  As more platforms become ActivityPub compliant, it becomes mroe valuable for platforms implemtn ActivityPub: more apps means more users on the federated network, more posts to read and share, and more choice for uses.  This network effect discourages vendor lock-in.  In the end, the useers win.</li>
+</ul>
+
+<h3 id="it-s-going-to-be-an-uphill-battle">It&rsquo;s going to be an uphill battle</h3>
+
+<ul>
+<li><p>I hope i&rsquo;ve convinced you of the radical impact that ActivityPub could have on the internet.  But there are some significant barriers preventing widespread adoption.  The thorniest one is money.</p></li>
+
+<li><p>Why is money an issue? Aren&rsquo;t Mastodon and PeerTube free and open-source?  Well, first of all, open source projects need funding too (that&rsquo;s a big topic that deserves its own blog post, so I&rsquo;m leaving it alone fro now).  The bigger issue right now is user adoption.  The  ActivityPub network is only viable if people use it, and to compete in any significant way with Facebook and Twitter we need a lot of people to use it.  To compete with the big guys, we need big money.  We need to be able to spread the world through marketing and blogging, to eninerr new ActivityPub applications, and to supprot people working full-timeon bringing about this revolution.</p></li>
+
+<li><p>I know this isn&rsquo;t necessarily a popular view in the open-srouce world, but I see funding as a critial priority to bring about the vison that ActivityPub promises.  Unfortunately, it&rsquo;s not clear how to obtain it.</p></li>
+
+<li><p>All the major rActivityPub-compliant applications I&rsquo;ve written about are open source projects, built and run by volunteers with tiny budgets.  Traditional social networking companies like Twitter and Facebook are funded by selling advertisements on their platform.  But in order to make any significant revenute form ads,  you needd a centralized audience whose attention you control.  Facebook needs to be able to say, &ldquo;we have X billion users; give use your money and we will show them your ads&rdquo;.  Plus, the big social companies extract value from theri suers by segmenting them based on their behavior and interests, enabling micro-targeted ad campaigns.</p></li>
+
+<li><p>None of that is possible  when the users and contents are spread across many servers and platforms.  There is no centralized audience to segment and advertised to.  We&rsquo;ll need to rethink the fundamental business model of socal networking if we want ActivityPub to take off.</p></li>
+</ul>
+
+<p>That being said, I do think ActivityPub offers trementdous business value.  It turns your croporate blog into a social network by offering native haring, following , liking, and replying.  And it does so on your customer&rsquo;s terms, which not only prevents abusive, spammy content but also helps your company&rsquo;s reputation with users and potential customers.  These benefits are valuable, and I think there is a way to turn that value into funding.</p>
+
+<ul>
+<li>It&rsquo;s important to think about how to make this revolution ahppend.  ActivityPub hs he potnetial to change the way we think and act on the internet, in a way that ecourages decentralization and puts users first again.  That&rsquo;s a vision worth fighting for.</li>
+</ul>
+
+  </article>
+
+  <br/>
+
+  
+  
+</section>
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+     © 2019    ·  Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>. 
+  </section>
+</footer>
+
+    </main>
+
+    
+
+  </body>
+
+</html>
