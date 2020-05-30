@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on 本来无一物</title>
@@ -6,10 +6,23 @@
     <description>Recent content in Posts on 本来无一物</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 12 May 2019 11:52:58 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 30 May 2020 09:17:31 +0800</lastBuildDate>
     
 	<atom:link href="https://ginhton.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Stuff3</title>
+      <link>https://ginhton.github.io/posts/stuff3/</link>
+      <pubDate>Sat, 30 May 2020 09:17:31 +0800</pubDate>
+      
+      <guid>https://ginhton.github.io/posts/stuff3/</guid>
+      <description>nice to meet you blog low speed   cdn.rawgit.com is timeout
+  google fonts is timeout
+  solve method for 1: grep and find source code, and change rawgit.com to rawgit.org/rawgit.com
+  solve method for 2: remove google fonts link reference
+  </description>
+    </item>
     
     <item>
       <title>Stuff2</title>
@@ -17,7 +30,7 @@
       <pubDate>Sun, 12 May 2019 11:52:58 +0800</pubDate>
       
       <guid>https://ginhton.github.io/posts/stuff2/</guid>
-      <description> mDNS  mDNS即组播DNS（multicast DNS）。使用5353端口，在内网没有DNS服务器时，就会出现此组播信息。 mDNS主要实现了在没有传统DNS服务器的情况下使局域网内的主机实现相互发现和通信。 more  python -m  run library module as a script for example, python -m SimpleHTTPServer  git submodule  git submodule init git submodule update git submodule update &amp;ndash;init &amp;ndash;recursive GOOD example is here  non-root access /dev/ttyUSB0  method 1: $ sudo chmod 666 /dev/ttyUSB0 method 2: $ sudo usermod -aG dialout USERNAME  org mode internal archive  link command: ort-toggle-archive-tag (, s a)  </description>
+      <description>mDNS  mDNS即组播DNS（multicast DNS）。使用5353端口，在内网没有DNS服务器时，就会出现此组播信息。 mDNS主要实现了在没有传统DNS服务器的情况下使局域网内的主机实现相互发现和通信。 more  python -m  run library module as a script for example, python -m SimpleHTTPServer  git submodule  git submodule init git submodule update git submodule update &amp;ndash;init &amp;ndash;recursive GOOD example is here  non-root access /dev/ttyUSB0  method 1: $ sudo chmod 666 /dev/ttyUSB0 method 2: $ sudo usermod -aG dialout USERNAME  org mode internal archive  link command: ort-toggle-archive-tag (, s a)  </description>
     </item>
     
     <item>
@@ -26,7 +39,7 @@
       <pubDate>Fri, 10 May 2019 23:50:41 +0800</pubDate>
       
       <guid>https://ginhton.github.io/posts/stuff1/</guid>
-      <description> a brand new start  jia you!~  </description>
+      <description>a brand new start  jia you!~  </description>
     </item>
     
   </channel>
