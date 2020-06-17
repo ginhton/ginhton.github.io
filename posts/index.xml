@@ -6,10 +6,20 @@
     <description>Recent content in Posts on 本来无一物</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 30 May 2020 09:17:31 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 16 Jun 2020 21:59:41 +0800</lastBuildDate>
     
 	<atom:link href="https://ginhton.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Stuff4</title>
+      <link>https://ginhton.github.io/posts/stuff4/</link>
+      <pubDate>Tue, 16 Jun 2020 21:59:41 +0800</pubDate>
+      
+      <guid>https://ginhton.github.io/posts/stuff4/</guid>
+      <description>lisp eq eql equal   eq use to compare address of the items. If they are in the same address, then they are eq. eq is used to compare symbol, not string, not number, not list.
+  eql is more general than eq. (eql &#39;foo &#39;foo) =&amp;gt; t, (eql 3 3) =&amp;gt; t, (eql 3 3.0) =&amp;gt; nil, different types.. eql compares the addresses of two object. if the two are of the same type, eql compares their value.</description>
+    </item>
     
     <item>
       <title>Stuff3</title>

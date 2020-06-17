@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Ginhton">
+    <meta name="description" content="Ginhton&#39;s personal website">
+    <meta name="keywords" content="blog,developer,personal">
+
+    <base href="https://ginhton.github.io/">
+    <title>
+  Stuff4 · 本来无一物
+</title>
+
+    <link rel="canonical" href="https://ginhton.github.io/posts/stuff4/">
+
+    
+    
+    <link rel="stylesheet" href="https://cdn.rawgit.org/cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+    <link rel="stylesheet" href="https://ginhton.github.io/css/style.min.css">
+
+    
+
+    <link rel="icon" type="image/png" href="https://ginhton.github.io/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://ginhton.github.io/images/favicon-16x16.png" sizes="16x16">
+
+    
+
+    <meta name="generator" content="Hugo 0.68.3" />
+  </head>
+
+  <body>
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://ginhton.github.io/">
+      本来无一物
+    </a>
+    
+    <ul class="navigation-list float-right">
+      
+      <li class="navigation-item">
+        <a class="navigation-link" href="/posts/">Blog</a>
+      </li>
+      
+      <li class="navigation-item">
+        <a class="navigation-link" href="/about/">About</a>
+      </li>
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+  <article>
+    <header>
+      <h1 class="title">Stuff4</h1>
+      <h2 class="date">June 16, 2020</h2>
+
+      
+    </header>
+
+    <h1 id="lisp-eq-eql-equal">lisp eq eql equal</h1>
+<ul>
+<li>
+<p>eq use to compare address of the items. If they are in the same address, then they are eq. eq is used to compare symbol, not string, not number, not list.</p>
+</li>
+<li>
+<p>eql is more general than eq. <code>(eql 'foo 'foo) =&gt; t</code>, <code>(eql 3 3) =&gt; t</code>, <code>(eql 3 3.0) =&gt; nil, different types.</code>. eql compares the addresses of two object. if the two are of the same type, eql compares their value.</p>
+</li>
+<li>
+<p>= is used to compare numbers, including in different types.</p>
+</li>
+<li>
+<p>equal compare the content of tow lists one by one to check if they are same. note: string can be seen as lists. <code>(eql &quot;aa&quot; &quot;aa&quot;) =&gt; nil</code>, <code>(equal &quot;aa&quot; &quot;aa&quot;) =&gt; t</code></p>
+</li>
+<li>
+<p>equalp ignore the case of two strings</p>
+</li>
+</ul>
+<h1 id="linux-command-line-adjust-volume">linux command line adjust volume</h1>
+<ul>
+<li>pactl -set-sink-volume @DEFAULT-SINK@ 20%</li>
+<li>pactl -set-sink-volume @DEFAULT_SINK@ +10%</li>
+<li>pactl -set-sink-volume @DEFAULT_SINK@ -10%</li>
+<li>pactl list sinks</li>
+</ul>
+<h1 id="alsa-advanced-linux-sound-architecture">ALSA (Advanced Linux Sound Architecture)</h1>
+<ul>
+<li>
+<p>高级Linux声音架构, 它在Linux系统上提供了音频和MIDI的支持</p>
+</li>
+<li>
+<p>在2.6内核中，ALSA已经成为默认的声音子系统，用来替换2.4系列的OSS(Open Sound System, 开放声音系统)</p>
+</li>
+<li>
+<p>ALSA主要特征包括：高效的支持从消费类入门级声卡到专业级音频设备所有类型的音频接口，完全模块化的设计，支持对称多处理（SMP)和线程安全，对OSS向后兼容，以及提供了用户空间的alsa-lib库来简化应用程序开发</p>
+</li>
+<li>
+<p>Efficient support for all types of audio interfaces, from consumer sound card to professional multichannel audio interfaces.</p>
+</li>
+<li>
+<p>Fully modularized sound drivers.</p>
+</li>
+<li>
+<p>SMP and thread-safe design.</p>
+</li>
+<li>
+<p>User space library (alsa-lib) to simplify application programming and provide higher level funtionality.</p>
+</li>
+<li>
+<p>Support for the older Open Sound System (OSS) API, providing binary compatibility for most OSS programs.</p>
+</li>
+</ul>
+<h1 id="pulseaudio">pulseaudio</h1>
+<ul>
+<li>PulseAudio is a sound server for POSIX and Win32 systems. A sound server is basiclly a proxy for your sound applications. It allows you to do advanced operations on your sound data as it passes between you application and your hardware. Things like transferring the audio to a different machine, changing the sample format or channel count and mixing serveral sounds into one are easily achieved using a sound server.</li>
+</ul>
+
+  </article>
+
+  <br/>
+
+  
+  
+</section>
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+     © 2020    ·  Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>. 
+  </section>
+</footer>
+
+    </main>
+
+    
+
+  </body>
+
+</html>
