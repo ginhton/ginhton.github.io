@@ -6,13 +6,22 @@
     <description>Recent content in Posts on 本来无一物</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 18 Jun 2020 23:06:35 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 19 Jun 2020 19:23:45 +0800</lastBuildDate>
     
 	<atom:link href="https://ginhton.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title></title>
+      <title>a title</title>
+      <link>https://ginhton.github.io/posts/stuff7/</link>
+      <pubDate>Fri, 19 Jun 2020 19:23:45 +0800</pubDate>
+      
+      <guid>https://ginhton.github.io/posts/stuff7/</guid>
+      <description>list  listen to many podcasts sleep for the whole afternoon (maybe last night it was code and I did&amp;rsquo;t sleep well) find a browser add-on to hide scroll bar  feeling  now, it&amp;rsquo;s 07:24 PM. I read the introduction of a paper. I think I can read one more chapter about lisp. At 08:42 PM, I finished reading lisp. I am so good! I will rest for some time, and later write down the example code.</description>
+    </item>
+    
+    <item>
+      <title>a title</title>
       <link>https://ginhton.github.io/posts/stuff6/</link>
       <pubDate>Thu, 18 Jun 2020 23:06:35 +0800</pubDate>
       
