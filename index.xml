@@ -6,10 +6,60 @@
     <description>Recent content on 本来无一物</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 06 Jul 2020 19:56:36 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 29 Dec 2020 21:02:10 +0800</lastBuildDate>
     
 	<atom:link href="https://ginhton.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>spacemacs layout</title>
+      <link>https://ginhton.github.io/posts/1229/</link>
+      <pubDate>Tue, 29 Dec 2020 21:02:10 +0800</pubDate>
+      
+      <guid>https://ginhton.github.io/posts/1229/</guid>
+      <description>About spacemacs layout   I always open several windows that contains many buffers when doing project A. When I want to temporarily switch to project B, I had close all the buffers for A, and then reopen files that belogs to project B. But after playing with B, I return to A with no idea about what I&amp;rsquo;ve done before and about what buffers should I open.
+  So is there a way to keep buffers belogs to different projects in different, Eh, workspace or something like that?</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ginhton.github.io/posts/201203e/</link>
+      <pubDate>Wed, 02 Dec 2020 10:48:46 +0800</pubDate>
+      
+      <guid>https://ginhton.github.io/posts/201203e/</guid>
+      <description>something   sleep at 4:30 am. because there is no electricity and no internet in the daytime. So I stay up late and play games.
+  plan to sleep in the daytime
+  wake up in near 9:00 am. stay in bed and play offline mobile games.
+  at 10:50 a.m. get up and write something to my blog
+  today, I will spend more time in ns3.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ginhton.github.io/posts/201202e/</link>
+      <pubDate>Tue, 01 Dec 2020 23:14:24 +0800</pubDate>
+      
+      <guid>https://ginhton.github.io/posts/201202e/</guid>
+      <description>sakura  sit in my seats; listen to music; wondering what to do next; blank in my mind courage; try to become more brave. meet good people, warm people, lovely people feel happy at this moment. only music and thoughts relax time to go to bed good night, sweety.  </description>
+    </item>
+    
+    <item>
+      <title>jianjianbeinixiyin</title>
+      <link>https://ginhton.github.io/posts/201202/</link>
+      <pubDate>Tue, 01 Dec 2020 22:32:10 +0800</pubDate>
+      
+      <guid>https://ginhton.github.io/posts/201202/</guid>
+      <description>list  clean room and desktop and bed start to search ns3 code (but only for a short time) buy a lot of food listen to music at night play hearthstone at afternoon get up late search ns3 related work, and give up quickly do not want to play YGO read some pages of book  feeling  do some physical work makes me feel good that is a good start, but I hope I can do more.</description>
+    </item>
+    
+    <item>
+      <title>again</title>
+      <link>https://ginhton.github.io/posts/stuff17/</link>
+      <pubDate>Thu, 05 Nov 2020 20:55:50 +0800</pubDate>
+      
+      <guid>https://ginhton.github.io/posts/stuff17/</guid>
+      <description>ns3 knowledge  protocol is intalled in Nodes, return netDevices address is assigned to netDevice, return interface internet stack is installed on nodes application is installed on Nodes a wifi netDevice need 3 items as parameters: phy, mac, and nodes  </description>
+    </item>
     
     <item>
       <title>Paper Question</title>
@@ -27,7 +77,7 @@ data  can we get that data? open source? is it proper to use that data? outdated
       <pubDate>Sat, 27 Jun 2020 20:55:50 +0800</pubDate>
       
       <guid>https://ginhton.github.io/posts/stuff15/</guid>
-      <description>list  read novel successfully defeat bad idea  feel  from zhihu: if you have something that you are really interested in, you will not always want to play games or do something bad. So the method can save me from games and meaninglessness is to find my interest and do it. I admit I cannot focus on my paper. Nothind else. jiayou  </description>
+      <description>list  read novel successfully defeat bad idea  feel  from zhihu: if you have something that you are really interested in, you will not always want to play games or do something bad. So the method can save me from games and meaninglessness is to find my interest and do it. I admit I cannot focus on my paper. Nothing else. jiayou  </description>
     </item>
     
     <item>
@@ -67,6 +117,33 @@ data  can we get that data? open source? is it proper to use that data? outdated
     </item>
     
     <item>
+      <title>hold on</title>
+      <link>https://ginhton.github.io/posts/stuff10/</link>
+      <pubDate>Mon, 22 Jun 2020 21:37:39 +0800</pubDate>
+      
+      <guid>https://ginhton.github.io/posts/stuff10/</guid>
+      <description>list  earphone broken. get up early lisp chapter a lot of typing (keybr, tipp10) guodegang basic outline of experiments summary anki word restore 20+ papers backup  feel  do not know how to relax must find a way that help me relax hope tomorrow things will be better thank time. thank myself.  </description>
+    </item>
+    
+    <item>
+      <title>courage</title>
+      <link>https://ginhton.github.io/posts/stuff9/</link>
+      <pubDate>Sun, 21 Jun 2020 15:34:31 +0800</pubDate>
+      
+      <guid>https://ginhton.github.io/posts/stuff9/</guid>
+      <description>list feel  get up early before 8:00 a.m. keep wake up before noon. until 03:39 p.m. I have typed several times, read half chapter blog, recite half-hour words, and listened to some music. I will read paper and find more papers in the evening. I will read one more chapter about lisp programming. at 09:07 p.m. I finish that paper and lisp chapter.  </description>
+    </item>
+    
+    <item>
+      <title>three thousand</title>
+      <link>https://ginhton.github.io/posts/stuff8/</link>
+      <pubDate>Sat, 20 Jun 2020 08:04:22 +0800</pubDate>
+      
+      <guid>https://ginhton.github.io/posts/stuff8/</guid>
+      <description>list  browse many podcasts and listen to some. exercise typing using colemak keyboard layout. listen to xiamu P2  time mark  first time to get up early. At 08:05, I finished breakfast. Emberassed to say that after breakfast I type for a while and go to sleep again. At about 10:30 or so, I get up and exercise typing for one hour. Then, a big meal, and a big sleep.</description>
+    </item>
+    
+    <item>
       <title>a title</title>
       <link>https://ginhton.github.io/posts/stuff7/</link>
       <pubDate>Fri, 19 Jun 2020 19:23:45 +0800</pubDate>
@@ -101,6 +178,47 @@ data  can we get that data? open source? is it proper to use that data? outdated
       <guid>https://ginhton.github.io/posts/stuff4/</guid>
       <description>lisp eq eql equal   eq use to compare address of the items. If they are in the same address, then they are eq. eq is used to compare symbol, not string, not number, not list.
   eql is more general than eq. (eql &#39;foo &#39;foo) =&amp;gt; t, (eql 3 3) =&amp;gt; t, (eql 3 3.0) =&amp;gt; nil, different types.. eql compares the addresses of two object. if the two are of the same type, eql compares their value.</description>
+    </item>
+    
+    <item>
+      <title>Stuff3</title>
+      <link>https://ginhton.github.io/posts/stuff3/</link>
+      <pubDate>Sat, 30 May 2020 09:17:31 +0800</pubDate>
+      
+      <guid>https://ginhton.github.io/posts/stuff3/</guid>
+      <description>nice to meet you blog low speed   cdn.rawgit.com is timeout
+  google fonts is timeout
+  solve method for 1: grep and find source code, and change rawgit.com to rawgit.org/rawgit.com
+  solve method for 2: remove google fonts link reference
+  </description>
+    </item>
+    
+    <item>
+      <title>Stuff2</title>
+      <link>https://ginhton.github.io/posts/stuff2/</link>
+      <pubDate>Sun, 12 May 2019 11:52:58 +0800</pubDate>
+      
+      <guid>https://ginhton.github.io/posts/stuff2/</guid>
+      <description>mDNS  mDNS即组播DNS（multicast DNS）。使用5353端口，在内网没有DNS服务器时，就会出现此组播信息。 mDNS主要实现了在没有传统DNS服务器的情况下使局域网内的主机实现相互发现和通信。 more  python -m  run library module as a script for example, python -m SimpleHTTPServer  git submodule  git submodule init git submodule update git submodule update &amp;ndash;init &amp;ndash;recursive GOOD example is here  non-root access /dev/ttyUSB0  method 1: $ sudo chmod 666 /dev/ttyUSB0 method 2: $ sudo usermod -aG dialout USERNAME  org mode internal archive  link command: ort-toggle-archive-tag (, s a)  </description>
+    </item>
+    
+    <item>
+      <title>Stuff1</title>
+      <link>https://ginhton.github.io/posts/stuff1/</link>
+      <pubDate>Fri, 10 May 2019 23:50:41 +0800</pubDate>
+      
+      <guid>https://ginhton.github.io/posts/stuff1/</guid>
+      <description>a brand new start  jia you!~  </description>
+    </item>
+    
+    <item>
+      <title>ne darling, ume ga ka na ta no?</title>
+      <link>https://ginhton.github.io/posts/stuff16/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://ginhton.github.io/posts/stuff16/</guid>
+      <description>knowledge   tcpdump options
+ -c: the number of packets captured -i interface: set the interface on which tcpdump will moniter -n: show address in number format, not hostname. -nn: in addition to -n, show port in number format, instead of service name -P: set the diretion of captured packets. available values are in, out, inout -s len: set the length of captured packets. default is 65535byte -t: no timestamp in every output -tt: show not fomatted time in every output -r: read data from file    CSMA (Carrier Sense Multiple Access)</description>
     </item>
     
   </channel>
