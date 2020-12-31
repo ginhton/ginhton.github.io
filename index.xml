@@ -6,10 +6,26 @@
     <description>Recent content on 本来无一物</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 29 Dec 2020 21:02:10 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 31 Dec 2020 13:08:54 +0800</lastBuildDate>
     
 	<atom:link href="https://ginhton.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>the end of 2020</title>
+      <link>https://ginhton.github.io/posts/1231/</link>
+      <pubDate>Thu, 31 Dec 2020 13:08:54 +0800</pubDate>
+      
+      <guid>https://ginhton.github.io/posts/1231/</guid>
+      <description>RSSI vs RX   RSSI: Received Signal Strength Indicator
+  RX: Received Power
+  RSSI 是在接收功率上取对数
+  from: http://www.elecfans.com/baike/wuxian/20171120582385.html
+  how to transfer files over the network using NETCAT   nc -l -p 9999 &amp;gt; received_file.txt
+  nc ip port &amp;lt; received_file.txt
+  from: https://tutorials.technology/tutorials/How-to-transfer-files-over-the-network-using-Netcat.html
+  </description>
+    </item>
     
     <item>
       <title>spacemacs layout</title>
