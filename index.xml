@@ -19,8 +19,9 @@
       <guid>https://ginhton.github.io/posts/1231/</guid>
       <description>RSSI vs RX   RSSI: Received Signal Strength Indicator
   RX: Received Power
-  RSSI 是在接收功率上取对数
+  RssI=10logP
   from: http://www.elecfans.com/baike/wuxian/20171120582385.html
+  from: https://blog.csdn.net/xiaogu0322/article/details/78710006
   how to transfer files over the network using NETCAT   nc -l -p 9999 &amp;gt; received_file.txt
   nc ip port &amp;lt; received_file.txt
   from: https://tutorials.technology/tutorials/How-to-transfer-files-over-the-network-using-Netcat.html
