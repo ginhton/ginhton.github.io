@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Ginhton">
+    <meta name="description" content="Ginhton&#39;s personal website">
+    <meta name="keywords" content="blog,developer,personal">
+
+    <base href="https://ginhton.github.io/">
+    <title>
+  0106 · 本来无一物
+</title>
+
+    <link rel="canonical" href="https://ginhton.github.io/posts/0106/">
+
+    
+    
+    <link rel="stylesheet" href="https://cdn.rawgit.org/cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
+    <link rel="stylesheet" href="https://ginhton.github.io/css/style.min.css">
+
+    
+
+    <link rel="icon" type="image/png" href="https://ginhton.github.io/images/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://ginhton.github.io/images/favicon-16x16.png" sizes="16x16">
+
+    
+
+    <meta name="generator" content="Hugo 0.68.3" />
+  </head>
+
+  <body>
+    <main class="wrapper">
+      <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="https://ginhton.github.io/">
+      本来无一物
+    </a>
+    
+    <ul class="navigation-list float-right">
+      
+      <li class="navigation-item">
+        <a class="navigation-link" href="/posts/">Blog</a>
+      </li>
+      
+      <li class="navigation-item">
+        <a class="navigation-link" href="/about/">About</a>
+      </li>
+      
+    </ul>
+    
+  </section>
+</nav>
+
+
+      <div class="content">
+        
+  <section class="container post">
+  <article>
+    <header>
+      <h1 class="title">0106</h1>
+      <h2 class="date">January 6, 2021</h2>
+
+      
+    </header>
+
+    <h1 id="org-external-links">org external links</h1>
+<ul>
+<li>
+<p><a href="https://orgmode.org/manual/External-Links.html">https://orgmode.org/manual/External-Links.html</a></p>
+</li>
+<li>
+<p>line number: <em>path_to_file::num</em></p>
+</li>
+<li>
+<p>some words: <em>path_to_file::some words</em></p>
+</li>
+<li>
+<p>task title: *path_to_file::<em>task title</em></p>
+</li>
+<li>
+<p>id: <em>path_to_file::#custom-id</em></p>
+</li>
+<li>
+<p>elisp: <em>elisp:zone</em></p>
+</li>
+</ul>
+<h1 id="gdb-basic-command">gdb basic command</h1>
+<ul>
+<li>
+<p><a href="https://www.tutorialspoint.com/gnu_debugger/gdb_commands.htm">https://www.tutorialspoint.com/gnu_debugger/gdb_commands.htm</a></p>
+</li>
+<li>
+<p>b main: Puts a break point at the begining of the program</p>
+</li>
+<li>
+<p>b: Puts a breakpoint at the current line</p>
+</li>
+<li>
+<p>b N: Puts a breakpoint at Line N</p>
+</li>
+<li>
+<p>b +N: Puts a breakpoint N lines down from the current line</p>
+</li>
+<li>
+<p>b fn: Puts a breakpoint at the begining of function &ldquo;fn&rdquo;</p>
+</li>
+<li>
+<p>d N: Delete breakpoint number N</p>
+</li>
+<li>
+<p>info break: List breakpoints</p>
+</li>
+<li>
+<p>r: Runs the program until a breakpoint or error</p>
+</li>
+<li>
+<p>c: Continus running the program until the next breakpoint or error</p>
+</li>
+<li>
+<p>f: Runs until the current function is finished</p>
+</li>
+<li>
+<p>s: Runs the next line of the program</p>
+</li>
+<li>
+<p>s N: Runs the next N lines of the program</p>
+</li>
+<li>
+<p>n: Like s, but it does not step into functions</p>
+</li>
+<li>
+<p>u N: Runs until you get N lines in front of the current line</p>
+</li>
+<li>
+<p>p var: Prints the current value of the variable &ldquo;var&rdquo;</p>
+</li>
+<li>
+<p>bt: Prints a stack trace</p>
+</li>
+<li>
+<p>u: Goes up a level in the stack</p>
+</li>
+<li>
+<p>d: Goes down a level in the stack</p>
+</li>
+<li>
+<p>q: Quit gdb</p>
+</li>
+</ul>
+<h1 id="gdb-basic-command-examples">gdb basic command examples</h1>
+<ul>
+<li>
+<p>r | r arg1 arg2 | r &lt; file1</p>
+</li>
+<li>
+<p>l | l 50 | l myfunction</p>
+</li>
+<li>
+<p>next | step | finish</p>
+</li>
+<li>
+<p>break 45 | break myfunction | continue</p>
+</li>
+<li>
+<p>print x | set x = 3 | set x = y</p>
+</li>
+<li>
+<p>call myfunction | call myotherfunction(x) | call strlen(mystring)</p>
+</li>
+<li>
+<p>display x | undisplay x</p>
+</li>
+<li>
+<p>handle [signalname][action]</p>
+</li>
+<li>
+<p>handle SIGUSR1 nostop</p>
+</li>
+<li>
+<p>handle SIGUSR1 noprint</p>
+</li>
+<li>
+<p>handle SIGUSR1 ignore</p>
+</li>
+<li>
+<p>more detailed example: <a href="https://www.tutorialspoint.com/gnu_debugger/gdb_debugging_examples.htm">https://www.tutorialspoint.com/gnu_debugger/gdb_debugging_examples.htm</a></p>
+</li>
+</ul>
+
+  </article>
+
+  <br/>
+
+  
+  
+</section>
+
+      </div>
+
+      <footer class="footer">
+  <section class="container">
+     © 2021    ·  Powered by <a href="https://gohugo.io/">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/">Coder</a>. 
+  </section>
+</footer>
+
+    </main>
+
+    
+
+  </body>
+
+</html>

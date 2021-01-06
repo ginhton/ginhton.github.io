@@ -6,10 +6,52 @@
     <description>Recent content in Posts on 本来无一物</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 31 Dec 2020 13:08:54 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 06 Jan 2021 19:04:40 +0800</lastBuildDate>
     
 	<atom:link href="https://ginhton.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>0106</title>
+      <link>https://ginhton.github.io/posts/0106/</link>
+      <pubDate>Wed, 06 Jan 2021 19:04:40 +0800</pubDate>
+      
+      <guid>https://ginhton.github.io/posts/0106/</guid>
+      <description>org external links   https://orgmode.org/manual/External-Links.html
+  line number: path_to_file::num
+  some words: path_to_file::some words
+  task title: *path_to_file::task title
+  id: path_to_file::#custom-id
+  elisp: elisp:zone
+  gdb basic command   https://www.tutorialspoint.com/gnu_debugger/gdb_commands.htm
+  b main: Puts a break point at the begining of the program
+  b: Puts a breakpoint at the current line
+  b N: Puts a breakpoint at Line N</description>
+    </item>
+    
+    <item>
+      <title>org roam</title>
+      <link>https://ginhton.github.io/posts/0105/</link>
+      <pubDate>Tue, 05 Jan 2021 23:56:40 +0800</pubDate>
+      
+      <guid>https://ginhton.github.io/posts/0105/</guid>
+      <description>feeling  fail several times in hearthstone. uninstall it because of anger start to use org-clock at end of this day, 11 p.m. or so, search and learn to use org-roam set alarm clock again after almost one year, and I hope I can get up early and eat breakfast  org-roam   installation in spacemacs: https://github.com/syl20bnr/spacemacs/blob/develop/layers/+emacs/org/README.org#org-roam-support
+  org-roam-find-file: create or open note
+  org-roam-capture: create note</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://ginhton.github.io/posts/0103/</link>
+      <pubDate>Sun, 03 Jan 2021 12:06:03 +0800</pubDate>
+      
+      <guid>https://ginhton.github.io/posts/0103/</guid>
+      <description>edit file with sudo in emacs  C-x C-f /sudo::/path/to/file RET  get the size of a directory in Linux   du -sh /var
+  du -h &amp;ndash;max-depth=1 /var
+  from https://linuxize.com/post/how-get-size-of-file-directory-linux/
+  from https://linuxhandbook.com/find-directory-size-du-command
+  data related  1 word = 2 byte 1 byte = 8 bit bps, bits per seconds  host order &amp;amp; network order  from: https://www.ibm.com/support/knowledgecenter/en/SSB27U_6.4.0/com.ibm.zvm.v640.kiml0/asonetw.htm  </description>
+    </item>
     
     <item>
       <title>the end of 2020</title>
